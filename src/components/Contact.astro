@@ -1,0 +1,95 @@
+---
+const { title } = Astro.props;
+---
+
+<section
+  id="contact"
+  class="h-screen w-full relative overflow-hidden text-center"
+>
+  <div class="w-full h-full flex flex-col items-center justify-center">
+    <form id="myForm" class="flex flex-col gap-y-4 [&>input]:rounded">
+      <input
+        type="text"
+        name="nombre"
+        id="nombre"
+        placeholder="Tu nombre"
+        class="p-3 text-lg focus:outline-none bg-white/90"
+        required
+      />
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Tu correo"
+        class="p-3 text-lg focus:outline-none bg-white/90"
+        required
+      />
+      <textarea
+        name="mensaje"
+        id="mensaje"
+        cols="40"
+        rows="5"
+        placeholder="Mensaje"
+        class="rounded p-3 bg-white/90 text-lg focus:outline-none"></textarea>
+      <input
+        type="submit"
+        value="Enviar"
+        class="mt-4 p-3 bg-[#1D2944] hover:opacity-75 transition-all hover:cursor-pointer active:scale-[.98] text-white text-xl"
+      />
+    </form>
+    <div class="flex justify-center w-full gap-x-3">
+      <div class="w-96 h-28 flex justify-center pt-14">
+        <a
+          href="https://www.linkedin.com/in/crist%C3%B3bal-valderrama-contreras-176275100/"
+          target="_blank"
+          class="w-14 h-auto"
+          ><img
+            src="lkdin.svg"
+            alt="Imagen logo LinkedIn"
+            class="hover:cursor-pointer active:scale-[.97]"
+          /></a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const nombre = document.querySelector("#nombre").value
+  const email = document.querySelector("#email").value
+  const mensaje = document.querySelector("#mensaje").value
+
+  let regexName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]{1,40}$/;
+  let regexEmail = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+  let regexMessage = /^.{1,300}$/;
+
+  let error = ""
+
+  if (nombre === "") {
+    error = "El campo nombre no puede quedar vacío"
+  }
+
+  // const validationsForm = (form) => {
+  //   let errors = {};
+
+  //   if (!form.nombre.trim()) {
+  //     errors.nombre = "El campo nombre es requerido";
+  //   } else if (!regexName.test(form.nombre.trim())) {
+  //     errors.nombre = "El campo nombre solo acepta letras y espacios";
+  //   }
+
+  //   if (!form.correo.trim()) {
+  //     errors.correo = "El campo correo es requerido";
+  //   } else if (!regexEmail.test(form.correo.trim())) {
+  //     errors.correo = "El correo es incorrecto";
+  //   }
+
+  //   if (!form.mensaje.trim()) {
+  //     errors.mensaje = "El campo mensaje es requerido";
+  //   } else if (!regexMessage.test(form.mensaje.trim())) {
+  //     errors.mensaje = "El mensaje solo acepta hasta 300 caracteres";
+  //   }
+
+  //   return errors;
+  // };
+</script>

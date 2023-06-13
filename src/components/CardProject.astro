@@ -1,0 +1,37 @@
+---
+const { title, description, tech, urlApp, urlGithub } = Astro.props;
+---
+
+<div
+  class="bg-black/10 text-white w-[550px] h-auto rounded p-5 flex flex-col border border-white/20 hover:border-white/70 transition-all hover:bg-white/5"
+>
+  <div class="flex flex-col items-center gap-y-2 h-full">
+    <div class="flex flex-col gap-y-4 h-full">
+      <h2 class="text-white text-center pb text-2xl">{title}</h2>
+      <p class="text-md text-white/50 text-justify tracking-tight px-4">{description}</p>
+    </div>
+    <ul class="grid grid-cols-5 grid-rows-2 text-white gap-3 py-5">
+      {
+        tech.map((item) => (
+          <li class="bg-white/10 rounded-full w-full px-1 text-sm truncate">
+            {item}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <div
+    class="flex justify-center gap-x-4 [&>a]:text-lg [&>a]:border [&>a]:w-32 [&>a]:transition-all [&>a]:px-6 [&>a]:py-1 [&>a]:rounded"
+  >
+    <a
+      href={urlApp}
+      target="_blank"
+      class="hover:bg-white/70 hover:text-black transition-all bg-white/10">Ver App</a
+    >
+    <a
+      href={urlGithub}
+      target="_blank"
+      class="hover:bg-white/80 hover:text-black transition-all bg-white/10">GitHub</a
+    >
+  </div>
+</div>
