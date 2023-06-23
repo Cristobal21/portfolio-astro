@@ -1,16 +1,69 @@
-<section class="overflow-hidden h-screen w-screen relative">
-  <div class="text-white pt-10 font-sans flex flex-col items-center">
-    <div class="w-full flex flex-col items-center text-center">
-      <h1 class="text-5xl pb-2 w-full">Cristóbal Valderrama</h1>
-      <h2 class="text-4xl font-extralight w-full">Desarrollador Web</h2>	
+---
+import { FiDownload } from 'react-icons/fi'
+import { FaLinkedin } from 'react-icons/fa'
+import { FaGithub } from 'react-icons/fa'
+---
+
+<section id="home" class="overflow-hidden h-screen w-screen relative">
+  <div class={`
+    text-white pt-14 font-sans flex flex-col items-center 
+    lg:justify-center lg:flex-row lg:h-full lg:flex lg:pt-28
+  `}>
+    <div class={`
+      w-full flex flex-col items-center text-center
+      lg:gap-y-4 lg:h-full lg:pt-28
+    `}>
+      <h1 class={`
+        text-4xl w-full
+        lg:text-6xl lg:fixed
+      `}
+      >Cristóbal Valderrama</h1>
+      <h2 class={`
+        text-2xl font-extralight w-full text-center underline underline-offset-4
+        lg:text-4xl lg:fixed lg:pt-20
+      `}>Desarrollador Web</h2>	
+      <div class={`
+        hidden flex-col items-center h-full gap-y-4 pt-20
+        lg:flex lg:transition-all lg:fixed lg:pt-48
+      `}>
+        <a
+          href="https://www.linkedin.com/in/crist%C3%B3bal-valderrama-contreras-176275100/"
+          target="_blank"
+          class={`
+            w-full h-auto py-3 px-8 bg-white/10 rounded border border-white/30 text-white flex justify-between items-center gap-x-4 active:scale-95
+            lg:hover:bg-white/80 lg:hover:text-black
+          `}
+        >
+          Ir a LinkedIn <FaLinkedin className='animate-pulse' />
+        </a>
+        <a
+          href="https://github.com/Cristobal21"
+          target="_blank"
+          class={`
+            w-full h-auto py-3 px-8 bg-white/10 rounded border border-white/30 text-white flex justify-between items-center gap-x-4 active:scale-95
+            lg:hover:bg-white/80 lg:hover:text-black
+          `}
+        >
+          Ir a GitHub <FaGithub className='animate-pulse' />
+        </a>          
+        <button class="bg-white/10 rounded border border-white/30 text-white active:scale-95">
+          <p class={`
+            py-3 px-8 w-full h-full flex justify-between items-center gap-x-4
+            lg:hover:bg-white/80 lg:hover:text-black
+          `}>
+            Descargar Currículum <FiDownload className='animate-bounce'/>
+          </p>
+        </button>
+      </div>
     </div>
-    <div class="pt-10 w-full flex justify-center">
-      <img src="cris.webp" alt="Imagen Cristobal Valderrama tono gris" class="rounded h-80 w-auto">
-      <!-- <ul class="text-lg flex flex-col items-center gap-y-2 pl-10 [&>li>a]:place-items-center [&>li]:w-36 [&>li]: [&>li]:py-1 [&>li]:px-2 [&>li]:rounded-lg transition-all">
-        <li class="hover:bg-white/5"><a href="#about" class="flex gap-x-4 active:scale-95"><SlUser />Inicio</a></li>
-        <li class="hover:bg-white/5"><a href="#projects" class="flex gap-x-4 active:scale-95"><SlFolder />Experiencia</a></li>
-        <li class="hover:bg-white/5"><a href="#contact" class="flex gap-x-4 active:scale-95"><SlEnvolope />Contacto</a></li>
-      </ul> -->
+    <div class={`
+      w-full flex justify-center pt-14
+      lg:h-full lg:pt-28
+    `}>
+      <img src="cris.webp" alt="Imagen Cristobal Valderrama tono gris" class={`
+        rounded h-96 w-auto
+        lg:h-[500px] lg:w-auto
+      `}>
     </div>
   </div>
 </section>

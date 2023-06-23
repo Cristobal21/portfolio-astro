@@ -1,0 +1,56 @@
+---
+// import { SlUser } from 'react-icons/sl'
+// import { SlFolder } from 'react-icons/sl'
+// import { SlEnvolope } from 'react-icons/sl'
+---
+<section id="nav-header" class={`
+  hidden
+  lg:flex lg:justify-center lg:w-screen lg:fixed lg:h-10 lg:py-3 lg:top-0 lg:z-40
+`}>
+  <nav>
+    <ul class={`
+      text-lg flex justify-center items-center text-white transition-all 
+      [&>li]:px-3 [&>li]:rounded-lg
+    `}>
+      <li><a href="#home" class="active:scale-95">Inicio</a></li>
+      <li><a href="#about" class="active:scale-95">Sobre Mí</a></li>
+      <li><a href="#projects" class="active:scale-95">Experiencia</a></li>
+      <li><a href="#contact" class="active:scale-95">Contacto</a></li>
+    </ul>
+  </nav>
+  <div
+    id="menu-backdrop"
+    class={`
+      absolute bg-white/10 backdrop-blur-lg rounded
+      translate-x-[var(--left)] translate-y-[var(--top)]
+      left-0 top-0 py-3
+      w-[var(--width)] h-[var(--height)]
+      transition-all duration-500
+      ease-in-out opacity-0 -z-10
+    `}
+  ></div>
+</section>
+
+<script>
+  const listItem = document.querySelectorAll("#nav-header li")
+  const menuBackDrop = document.querySelector("#menu-backdrop") as HTMLElement
+
+  listItem.forEach((item) => {
+    item.addEventListener("mouseenter", () => {
+      const { left, top, width, height } = item.getBoundingClientRect()
+
+      menuBackDrop.style.setProperty("--left", `${left}px`)
+      menuBackDrop.style.setProperty("--top", `${top}px`)
+      menuBackDrop.style.setProperty("--width", `${width}px`)
+      menuBackDrop.style.setProperty("--height", `${height}px`)
+
+      menuBackDrop.style.opacity = "1"
+      menuBackDrop.style.visibility = "visible"
+    })
+
+    item.addEventListener("mouseleave", () => {
+      menuBackDrop.style.opacity = "0"
+      menuBackDrop.style.visibility = "hidden"
+    })
+  })
+</script>
