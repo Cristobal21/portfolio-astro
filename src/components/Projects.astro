@@ -2,45 +2,35 @@
 import CardProject from "./CardProject.astro";
 ---
 
-<section id="projects" class="h-screen w-full relative overflow-hidden">
-  <h1 class="text-white text-4xl text-center underline underline-offset-4 font-light py-8">Proyectos Personales</h1>
-  <div
-    class="flex flex-col gap-y-2 items-center justify-center w-full h-auto"
-  >
-    <CardProject
-      title="Weather App"
-      description="Buscador que muestra la información del clima de algún lugar de latinoamerica, los datos se obtienen de OpenWeather API."
-      tech={["Bootstrap", "Javascript", "React", "Css", "Api"]}
-      urlApp="https://weather-latino.netlify.app/"
-      urlGithub="https://github.com/Cristobal21/Weather-app"
-    />
-    <CardProject
-      title="Despachos App - En Desarrollo"
-      description="App para registrar pedidos en una base de datos MongoDB."
-      tech={["Tailwindcss", "Javascript", "React", "Node JS", "MongoDB"]}
-      urlApp="https://weather-latino.netlify.app/"
-      urlGithub="https://github.com/Cristobal21/Weather-app"
-    />     
-    <!-- <CardProject
-      title="Despachos App - En Desarrollo"
-      description="App para crear pedidos con su respectiva información de despacho, los pedidos quedan registrados en una base de datos MongoDB."
-      tech={["Tailwindcss", "Javascript", "React", "Node JS", "MongoDB"]}
-      urlApp="https://weather-latino.netlify.app/"
-      urlGithub="https://github.com/Cristobal21/Weather-app"
-    /> 
-    <CardProject
-      title="Despachos App - En Desarrollo"
-      description="App para crear pedidos con su respectiva información de despacho, los pedidos quedan registrados en una base de datos MongoDB."
-      tech={["Tailwindcss", "Javascript", "React", "Node JS", "MongoDB"]}
-      urlApp="https://weather-latino.netlify.app/"
-      urlGithub="https://github.com/Cristobal21/Weather-app"
-    /> -->
-    <!-- <CardProject
-      title="Despachos App - En Desarrollo"
-      description="App para crear pedidos con su respectiva información de despacho, los pedidos quedan registrados en una base de datos MongoDB."
-      tech={["Tailwindcss", "Javascript", "React", "Node JS", "MongoDB"]}
-      urlApp="https://weather-latino.netlify.app/"
-      urlGithub="https://github.com/Cristobal21/Weather-app"
-    />  -->
+<section id="projects" class={`
+  h-screen w-screen relative overflow-hidden
+  lg:flex lg:justify-end
+`}>
+  <div class="lg:w-1/2 lg:h-full lg:pt-20 lg:z-30 lg:overflow-y-auto">
+    <h1 class={`
+      text-white text-4xl text-center underline underline-offset-4 font-light py-8
+      lg:text-5xl
+    `}>Proyectos Personales</h1>
+    <div
+      class={`
+        flex flex-col gap-y-2 items-center justify-center w-full h-auto
+        lg:grid lg:grid-cols-2 lg:grid-flow-row lg:gap-2 lg:place-items-center lg:px-6
+      `}
+    >
+      <CardProject
+        title="Weather App"
+        description="Buscador que muestra la información del clima de algún lugar de latinoamerica, los datos se obtienen de OpenWeather API."
+        tech={["Bootstrap", "Javascript", "React", "Css", "Api"]}
+        urlApp="https://weather-latino.netlify.app/"
+        urlGithub="https://github.com/Cristobal21/Weather-app"
+      />
+      <CardProject
+        title="Despachos App - En Desarrollo"
+        description="App para registrar pedidos en una base de datos MongoDB."
+        tech={["Tailwindcss", "Javascript", "React", "Node JS", "MongoDB"]}
+        urlApp="https://weather-latino.netlify.app/"
+        urlGithub="https://github.com/Cristobal21/Weather-app"
+      /> 
+    </div>
   </div>
 </section>

@@ -5,18 +5,24 @@ import { BsGithub } from "react-icons/bs";
 
 
 <div
-  class="bg-black/10 text-white w-auto h-auto rounded py-5 mx-4 flex flex-col items-center border border-white/20 lg:hover:border-white/70 transition-all lg:hover:bg-white/5"
+  class={`
+    bg-black/10 text-white w-auto h-auto rounded py-5 mx-4 flex flex-col items-center border border-white/20 lg:hover:border-white/70 transition-all lg:hover:bg-white/5
+    lg:w-full lg:h-[17rem]
+  `}
 >
   <div class="flex flex-col items-center h-auto w-full px-3">
     <div class="flex flex-col gap-y-3 h-full">
       <h2 class="text-white text-center text-xl">{title}</h2>
-      <p class="text-md text-white/50 text-justify tracking-tight px-4">
+      <p class={`
+        text-md text-white/50 text-justify tracking-tight px-4
+        lg:h-[72px]
+      `}>
         {description}
       </p>
     </div>
   </div>
   <div
-    class="flex flex-col text-center [&>div>a]:text-lg [&>div>a]:border [&>div>a]:w-auto [&>div>a]:transition-all [&>div>a]:py-1 [&>div>a]:rounded"
+    class="flex flex-col justify-between h-full text-center [&>div>a]:text-lg [&>div>a]:border [&>div>a]:w-auto [&>div>a]:transition-all [&>div>a]:py-1 [&>div>a]:rounded"
   >
     <div>
       <ul
