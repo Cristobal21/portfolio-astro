@@ -47,23 +47,29 @@ import { MdOutlineMailOutline } from 'react-icons/md'
           `}
         >
           <FaGithub className='animate-pulse' /> Ir a GitHub
-        </a>          
-        <button class="bg-white/10 rounded border w-full border-white/30 text-white active:scale-95">
-          <p class={`
-            py-3 px-8 w-full h-full flex justify-between items-center gap-x-4
-            lg:hover:bg-white/80 lg:hover:text-black lg:flex lg:justify-start
-          `}>
-            <MdEmail className='animate-pulse'/> Escríbeme
-          </p>
-        </button>
-        <button class="bg-white/10 rounded border border-white/30 text-white active:scale-95">
-          <p class={`
-            py-3 px-8 w-full h-full flex justify-between items-center gap-x-4
-            lg:hover:bg-white/80 lg:hover:text-black lg:flex lg:justify-start
-          `}>
-            <FiDownload className='animate-bounce'/> Descargar Currículum
-          </p>
-        </button>
+        </a> 
+        <a
+          href="#"
+          onclick="window.open('mailto:tobal.developer@gmail.com');"
+          target="_blank"
+          class={`
+            w-full h-auto py-3 px-8 bg-white/10 rounded border border-white/30 text-white flex items-center gap-x-4 active:scale-95
+            lg:hover:bg-white/80 lg:hover:text-black
+          `}
+        >
+          <MdEmail className='animate-pulse'/> Escríbeme
+        </a>
+        <a
+          href="Cristobal-Valderrama.pdf"
+          target="_blank"
+          download="Cristobal Valderrama"
+          class={`
+            w-full h-auto py-3 px-8 bg-white/10 rounded border border-white/30 text-white flex items-center gap-x-4 active:scale-95
+            lg:hover:bg-white/80 lg:hover:text-black
+          `}
+        >
+          <FiDownload className='animate-bounce'/> Descargar Currículum
+        </a>
       </div>
     </div>
     <div class={`
