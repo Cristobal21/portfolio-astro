@@ -1,27 +1,58 @@
 ---
-import { FiDownload } from 'react-icons/fi'
-import { FaLinkedin } from 'react-icons/fa'
+import { FiDownload } from "react-icons/fi";
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 ---
 
 <section
   id="contact"
   class="h-screen w-screen relative overflow-hidden text-center"
 >
-  <h1 class="text-center text-white text-4xl font-light underline underline-offset-4 py-8">Contacto</h1>
+  <h1
+    class="text-center text-white text-4xl font-light underline underline-offset-4 py-8 font-text3 lg:font-text2"
+  >
+    Contacto
+  </h1>
   <div class="w-full h-full flex flex-col items-center">
     <div class="flex flex-col items-center h-full gap-y-4">
       <a
         href="https://www.linkedin.com/in/crist%C3%B3bal-valderrama-contreras-176275100/"
         target="_blank"
-        class="w-full h-auto py-3 px-8 bg-white/10 rounded border border-white/30 text-white flex justify-center items-center gap-x-4 active:scale-95"
+        class="w-full h-auto py-3 px-8 bg-white/10 rounded border border-white/30 text-white flex items-center gap-x-4 active:scale-95 hover:bg-white/80 hover:text-black"
       >
-        Ir a LinkedIn <FaLinkedin />
-      </a>          
-      <button
-        class=" bg-white/10 rounded border border-white/30 text-white active:scale-95"
+        <FaLinkedin /> Ir a LinkedIn
+      </a>
+      <a
+        href="https://github.com/Cristobal21"
+        target="_blank"
+        class={`
+            w-full h-auto py-3 px-8 bg-white/10 rounded border border-white/30 text-white flex items-center gap-x-4 active:scale-95 hover:bg-white/80 hover:text-black
+          `}
       >
-        <p class="py-3 px-8 w-full h-full flex justify-center items-center gap-x-4 hover:animate-bounce">Descargar Currículum <FiDownload className=''/></p>
-      </button>
+        <FaGithub className="animate-pulse" /> Ir a GitHub
+      </a>
+      <a
+        href="#"
+        onclick="
+        window.open('mailto:tobal.developer@gmail.com');"
+        target="_blank"
+        class={`
+            w-full h-auto py-3 px-8 bg-white/10 rounded border border-white/30 text-white flex items-center gap-x-4 active:scale-95 hover:bg-white/80 hover:text-black
+          `}
+      >
+        <MdEmail className="animate-pulse" /> Escríbeme
+      </a>
+      <a
+        href="Cristobal-Valderrama.pdf"
+        target="_blank"
+        download="Cristobal Valderrama"
+        class={`
+          w-full h-auto py-3 px-8 bg-white/10 rounded border border-white/30 text-white flex items-center gap-x-4 active:scale-95 hover:bg-white/80 hover:text-black
+        `}
+      >
+        <FiDownload className="animate-bounce" /> Descargar Currículum
+      </a>
     </div>
   </div>
 </section>
