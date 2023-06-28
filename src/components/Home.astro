@@ -3,7 +3,6 @@ import { FiDownload } from 'react-icons/fi'
 import { FaLinkedin } from 'react-icons/fa'
 import { FaGithub } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
-import { MdOutlineMailOutline } from 'react-icons/md'
 ---
 
 <section id="home" class="overflow-hidden h-screen w-screen relative z-30">
@@ -16,26 +15,25 @@ import { MdOutlineMailOutline } from 'react-icons/md'
       lg:gap-y-4 lg:h-full
     `}>
       <h1 class={`
-        text-4xl w-full
-        lg:text-6xl lg:fixed
-        font-title
+        text-3xl w-full
+        lg:text-5xl lg:fixed
+        font-title2
       `}
-      >Cristóbal Valderrama</h1>
+      >CrisTóbal Valderrama</h1>
       <h2 class={`
-        text-2xl font-extralight w-full text-center underline underline-offset-4
+        text-2xl font-extralight w-full font-title2 text-center underline underline-offset-4
         lg:text-4xl lg:fixed lg:pt-20
-        font-text1
-      `}>Desarrollador Web</h2>	
+      `}>desarrollador Web</h2>	
       <div class={`
-        hidden flex-col items-center h-full gap-y-4 pt-20
-        lg:flex lg:transition-all lg:fixed lg:pt-48 lg:[&>a]:justify-start [&>a]:font-text1
+        hidden flex-col items-center h-full gap-y-4 pt-20 [&>a]:transition-all
+        lg:flex lg:fixed lg:pt-48 lg:[&>a]:justify-start [&>a]:font-text1
       `}>
         <a
           href="https://www.linkedin.com/in/crist%C3%B3bal-valderrama-contreras-176275100/"
           target="_blank"
           class={`
             w-full h-auto py-3 px-8 bg-white/10 rounded border border-white/30 text-white flex items-center gap-x-4 active:scale-95
-            lg:hover:bg-white/80 lg:hover:text-black
+            lg:hover:bg-white/80 lg:hover:text-black 
           `}
         >
           <FaLinkedin className='animate-pulse' /> Ir a LinkedIn
