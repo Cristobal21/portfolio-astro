@@ -3,7 +3,7 @@
   hidden
   lg:flex lg:justify-center lg:w-screen lg:fixed lg:h-10 lg:py-3 lg:top-0 lg:z-40 font-text1
 `}>
-  <nav>
+  <nav class="pt-3">
     <ul class={`
       text-lg flex justify-center items-center text-white transition-all 
       [&>li]:px-3 [&>li]:rounded-lg
@@ -43,6 +43,7 @@
 
       menuBackDrop.style.opacity = "1"
       menuBackDrop.style.visibility = "visible"
+      menuBackDrop.style.backgroundColor = "#ffff"
     })
 
     item.addEventListener("mouseleave", () => {
