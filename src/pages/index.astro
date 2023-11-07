@@ -8,7 +8,7 @@ import Navigation from '../components/Navigation.astro';
 ---
 
 <Layout title="Bienvenido a mi web personal.">
-	<main class="flex bg-black/10 snap-y snap-mandatory relative overflow-x-hidden scroll-smooth overflow-y-scroll h-screen w-screen">
+	<main class="flex bg-black/10 snap-y snap-mandatory relative overflow-x-hidden scroll-smooth overflow-y-scroll h-screen w-screen transition-all">
 		<Navigation />
 		<div class="w-full">
 			<div class={`
@@ -18,10 +18,10 @@ import Navigation from '../components/Navigation.astro';
 					<Home />
 				</div>
 				<div class="snap-center">
-					<About />
+					<Projects />
 				</div>
 				<div class="snap-center">
-					<Projects />
+					<About />
 				</div>
 				<div class="snap-center lg:hidden">
 					<Contact />
