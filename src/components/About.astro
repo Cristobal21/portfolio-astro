@@ -1,26 +1,32 @@
 ---
-import { Model3D } from './Model3D'
+import CardAbout from "./CardAbout.astro";
+
 ---
 
+
+
 <section id="about" class={`
-  overflow-hidden h-screen w-screen relative
-  lg:flex lg:justify-center
+  overflow-hidden h-full w-full bg-red-300
+  lg:flex lg:justify-center lg:items-center
 `}>
-  <Model3D />
-  <div class="lg:w-1/2 lg:px-14 lg:text-justify lg:h-full lg:pt-40">
-    <h1 class={`
-      text-center text-white text-3xl py-8 font-light font-text3 lg:font-text2
-      lg:text-5xl
-    `}>Un poco de mí</h1>
-    <div class={`
-      text-md px-8 h-full w-full text-justify font-text1 text-white tracking-tight flex flex-col items-center gap-y-2 [&>p]:w-full [&>p]:border [&>p]:border-white/20 [&>p]:py-2 [&>p]:px-6 [&>p]:bg-black/10 [&>p]:rounded
+  <div class={`
+    lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:gap-2 lg:pb-10 lg:w-[800px] lg:h-[600px] lg:max-h-[600px] lg:pt-28 
+    [&>div]:lg:h-auto [&>div]:rounded-xl [&>div]:text-lg [&>div]:transition-all [&>div]:ease-in-out [&>div]:duration-700 [&>div]:bg-cyan-900 [&>div]:flex [&>div]:justify-center [&>div]:items-center [&>div]:text-white [&>div]:transform [&>div]:lg:w-full [&>div]:lg:py-6 [&>div]:lg:px-10
+  `}>
+    <CardAbout title="Personal" text="Nacido y criado en Chile hasta la fecha."/>
+    <CardAbout title="Estudios" text="Estoy titulado como Analista Programador Computacional, y lo que más disfruté aprender fue Desarrollo y Diseño de Aplicaciones Web, ahí fue cuando aprendí PHP, pero cuando realmente me convencí de que me gustaba esto, fue la vez que escuche sobre Javascript."/>
+    <CardAbout title="Pasatiempos" text="Me gusta ver anime, mi favorito es One Piece, también me gusta ver películas, donde el cine de terror y comedia son mis preferidos. Como actividades al aire libre me gusta pasear en bicicleta y fumar marihuana."/>
+    <CardAbout title="Profesional" text="Hasta el momento no tengo experiencia laboral, por lo mismo es que me mantengo estudiando de manera constante y autodidacta."/>
+    
+    <!-- <div class={`
+      text-md px-8 h-full w-full text-justify font-text1 text-white tracking-tight flex flex-col items-center gap-y-2 [&>p]:w-full [&>p]:border [&>p]:border-white/20 [&>p]:py-2 [&>p]:px-6 [&>p]:bg-white/20 [&>p]:rounded [&>p]:text-start
       lg:items-start lg:[&>p]:w-full lg:text-lg lg:font-text2
     `}>
       <p>
         Nacido y criado en Chile desde 1995, hasta la fecha.
       </p>
       <p>
-        Estoy titulado de Analista Programador Computacional, por consiguiente, fue que mi interés y pasión por el desarrollo web comenzó.
+        Estoy titulado como Analista Programador Computacional, fue entonces fue que mi interés y pasión por el desarrollo web comenzó.
       </p>
       <p>
         Desde entonces me he dedicado a estudiar de manera autodidacta todo lo que pudiera tener relación al desarrollo y tecnologías web.
@@ -28,6 +34,6 @@ import { Model3D } from './Model3D'
       <p>
         En un mundo donde la tecnología crece a pasos agigantados, donde la era digital es la que predomina por sobre todo, ahí, en algún punto estoy yo, con ansias de poder utilizar mis conocimientos y habilidades para crear contenido digital que sirva de aporte para el mundo y rubro de la tecnología.
       </p>
-    </div>
+    </div> -->
   </div>
 </section>

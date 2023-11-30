@@ -7,27 +7,25 @@ import { MdEmail } from 'react-icons/md'
 
 <section id="home" class="overflow-hidden h-screen w-screen relative z-30 ">
   <div class={`
-    text-white pt-14 font-sans flex flex-col items-center 
-    lg:justify-center lg:flex-row lg:h-full lg:flex lg:pt-48 lg:[&>div]:m-4
+    text-white font-sans flex flex-col items-center 
+    lg:justify-center lg:flex-row lg:h-full lg:flex lg:pt-32 lg:[&>div]:m-4
   `}>
     <div class={`
-      w-full h-auto hover:mr-28 transform hover:translate-x-32 hover:scale-105 hover:fade flex flex-col items-center text-center rounded-3xl hover:bg-white/10 hover:shadow-xl transition-all  ease-in-out duration-500
-      lg:h-full lg:flex lg:justify-between lg:space-y-32 lg:pt-32
+      w-full h-auto transform  flex flex-col items-center text-center rounded-3xl transition-all  ease-in-out duration-500
+      lg:h-full lg:flex lg:justify-between lg:hover:translate-x-32 lg:hover:scale-105 lg:hover:bg-white/10 lg:hover:shadow-inner lg:hover:mr-28 lg:space-y-32
     `}>
-      <div class="flex flex-col lg:fixed lg:h-auto lg:max-w-max lg:w-full">
+      <div class="flex flex-col gap-y-2 pt-16 lg:fixed lg:h-auto lg:max-w-max lg:w-full">
         <h1 class={`
-          text-3xl w-full text-[#ffff] 
-          lg:text-5xl
-          font-title2
+          text-5xl w-full font-title2 text-[#ffff]  
         `}
         >CrisTóbAl ValderramA</h1>
         <h2 class={`
-          pt-8 text-2xl font-extralight w-full font-title2 text-center underline underline-offset-4 
-          lg:text-4xl lg:pt-4 
+          pt-4 text-3xl font-extralight w-full font-title2 text-center underline underline-offset-4 
+          lg:text-4xl
         `}>desarrolladoR Web</h2>	
       </div>
       <div class={`
-        hidden w-auto gap-4 pt-10 [&>a]:transition-all [&>a]:flex [&>a]:items-center [&>a]:font-text2 [&>a]:border [&>a]:border-white/30 [&>a]:text-white [&>a]:rounded-xl
+        hidden w-auto gap-4 pt-36 [&>a]:transition-all [&>a]:flex [&>a]:items-center [&>a]:font-text2 [&>a]:border [&>a]:border-white/30 [&>a]:text-white [&>a]:rounded-xl
         lg:grid lg:grid-cols-2 lg:fixed lg:[&>a]:justify-start 
       `}>
         <a
@@ -75,13 +73,12 @@ import { MdEmail } from 'react-icons/md'
       </div>
     </div>
     <div class={`
-      hover:ml-10 hover:mr-20 hover:scale-105 hover:shadow-xl hover:bg-white/10 transition-all ease-in-out duration-500 transform hover:-translate-x-20
-      w-full h-auto flex justify-center pt-14  rounded-3xl items-center
-      lg:h-full lg:p-0
+      transition-all ease-in-out duration-500 transform pt-10 w-full h-auto flex justify-center items-center rounded-3xl
+      lg:h-full lg:hover:ml-28 lg:hover:-translate-x-32 lg:pt-0 lg:hover:scale-105 lg:hover:shadow-inner lg:hover:bg-white/10
     `}>
       <img src="cris.webp" alt="Imagen Cristobal Valderrama tono gris" class={`
-        rounded h-96 w-auto
-        lg:h-[500px] lg:w-auto
+        rounded-lg h-72 w-auto 
+        lg:h-[22rem]
       `}>
     </div>
   </div>

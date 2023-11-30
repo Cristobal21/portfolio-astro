@@ -6,15 +6,15 @@ import CardProject from "./CardProject.astro";
   h-screen w-screen relative overflow-hidden
   lg:flex lg:flex-row lg:justify-end
 `}>
-  <!-- <Model3D client:load /> -->
+  <h1 class={`
+    text-white text-3xl text-center font-light pt-10 font-text3 
+    lg:text-5xl lg:font-text2 lg:mr-10 lg:pt-28
+  `}>Proyectos Personales</h1>
   <div class="lg:w-1/2 lg:h-full lg:pt-20 lg:z-30">
-    <h1 class={`
-      text-white text-3xl text-center font-light py-8 font-text3 
-      lg:text-5xl lg:font-text2 lg:mr-10
-    `}>Proyectos Personales</h1>
     <div
       class={`
-        flex flex-col gap-y-3 w-full px-10 pt-10 transition-all
+        flex flex-col justify-between gap-y-6 items-center pb-10 max-h-[44rem] overflow-y-auto scroll-behavior-smooth w-full px-6 mt-10 transition-all
+        lg:gap-y-2  lg:max-h-full lg:overflow-hidden
       `}
     >
       <CardProject
