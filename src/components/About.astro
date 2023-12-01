@@ -6,12 +6,15 @@ import CardAbout from "./CardAbout.astro";
 
 
 <section id="about" class={`
-  overflow-hidden h-full w-full bg-red-300
-  lg:flex lg:justify-center lg:items-center
+  h-screen flex flex-col items-center
+  lg:flex lg:justify-center lg:items-center lg:overflow-hidden lg:h-screen lg:w-full
 `}>
+  <h2 class="text-center text-3xl w-full text-white font-light py-8 font-text3 visible lg:hidden">Un poco sobre mí</h2>
   <div class={`
-    lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:gap-2 lg:pb-10 lg:w-[800px] lg:h-[600px] lg:max-h-[600px] lg:pt-28 
-    [&>div]:lg:h-auto [&>div]:rounded-xl [&>div]:text-lg [&>div]:transition-all [&>div]:ease-in-out [&>div]:duration-700 [&>div]:bg-cyan-900 [&>div]:flex [&>div]:justify-center [&>div]:items-center [&>div]:text-white [&>div]:transform [&>div]:lg:w-full [&>div]:lg:py-6 [&>div]:lg:px-10
+    px-10 h-full flex flex-col items-center overflow-y-auto pb-10 gap-y-2
+    lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:gap-4 lg:pb-20 lg:w-[1000px] lg:h-full lg:max-h-full lg:pt-28 
+    [&>div]:lg:h-full [&>div]:rounded-lg [&>div]:lg:text-lg [&>div]:transition-all [&>div]:ease-in-out [&>div]:duration-700 [&>div]:bg-cyan-900 [&>div]:flex [&>div]:justify-center [&>div]:items-center [&>div]:text-white [&>div]:transform [&>div]:lg:w-full [&>div]:lg:px-10 
+    [&>div]:h-full [&>div]:w-full  
   `}>
     <CardAbout title="Personal" text="Nacido y criado en Chile hasta la fecha."/>
     <CardAbout title="Estudios" text="Estoy titulado como Analista Programador Computacional, y lo que más disfruté aprender fue Desarrollo y Diseño de Aplicaciones Web, ahí fue cuando aprendí PHP, pero cuando realmente me convencí de que me gustaba esto, fue la vez que escuche sobre Javascript."/>

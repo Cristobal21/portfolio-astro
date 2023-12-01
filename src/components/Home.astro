@@ -7,32 +7,33 @@ import { MdEmail } from 'react-icons/md'
 
 <section id="home" class="overflow-hidden h-screen w-screen relative z-30 ">
   <div class={`
-    text-white font-sans flex flex-col items-center 
+    text-white font-sans flex flex-col h-full items-center 
     lg:justify-center lg:flex-row lg:h-full lg:flex lg:pt-32 lg:[&>div]:m-4
   `}>
     <div class={`
-      w-full h-auto transform  flex flex-col items-center text-center rounded-3xl transition-all  ease-in-out duration-500
-      lg:h-full lg:flex lg:justify-between lg:hover:translate-x-32 lg:hover:scale-105 lg:hover:bg-white/10 lg:hover:shadow-inner lg:hover:mr-28 lg:space-y-32
+      w-full h-full transform flex flex-col justify-center items-center text-center rounded-3xl transition-all  ease-in-out duration-500
+      lg:h-full lg:flex lg:flex-col lg:items-center lg:justify-center lg:content-start lg:hover:translate-x-32 lg:hover:scale-105 lg:hover:bg-white/10 lg:hover:shadow-inner lg:hover:mr-28
     `}>
-      <div class="flex flex-col gap-y-2 pt-16 lg:fixed lg:h-auto lg:max-w-max lg:w-full">
+      <div class="flex flex-col items-center justify-center lg:h-[600px] lg:max-w-full lg:w-full">
         <h1 class={`
           text-5xl w-full font-title2 text-[#ffff]  
         `}
         >CrisTóbAl ValderramA</h1>
         <h2 class={`
-          pt-4 text-3xl font-extralight w-full font-title2 text-center underline underline-offset-4 
+          pt-10 px-4 text-3xl font-extralight w-full font-title2 text-center underline underline-offset-4 
           lg:text-4xl
         `}>desarrolladoR Web</h2>	
       </div>
       <div class={`
-        hidden w-auto gap-4 pt-36 [&>a]:transition-all [&>a]:flex [&>a]:items-center [&>a]:font-text2 [&>a]:border [&>a]:border-white/30 [&>a]:text-white [&>a]:rounded-xl
-        lg:grid lg:grid-cols-2 lg:fixed lg:[&>a]:justify-start 
+        hidden
+        lg:grid lg:grid-cols-2 lg:gap-4 lg:h-full lg:content-start
+        [&>a]:transition-all [&>a]:w-full [&>a]:py-4 [&>a]:px-9 [&>a]:bg-white/10  [&>a]:gap-x-4 [&>a]:flex lg:[&>a]:justify-start [&>a]:items-center [&>a]:font-text3 [&>a]:border [&>a]:border-white/30 [&>a]:text-white [&>a]:rounded-xl
       `}>
         <a
           href="https://www.linkedin.com/in/crist%C3%B3bal-valderrama-contreras-176275100/"
           target="_blank"
           class={`
-            w-full h-auto py-3 px-8 bg-white/10  gap-x-4 active:scale-[.96]
+            active:scale-[.96]
             lg:hover:bg-white/90 lg:hover:text-black 
           `}
         >
@@ -42,7 +43,7 @@ import { MdEmail } from 'react-icons/md'
           href="https://github.com/Cristobal21"
           target="_blank"
           class={`
-            w-full h-auto py-3 px-8 bg-white/10 gap-x-4 active:scale-[.96]
+            active:scale-[.96]
             lg:hover:bg-white/90 lg:hover:text-black
           `}
         >
@@ -53,7 +54,7 @@ import { MdEmail } from 'react-icons/md'
           onclick="window.open('mailto:tobal.developer@gmail.com');"
           target="_blank"
           class={`
-            w-full h-auto py-3 px-8 bg-white/10 gap-x-4 active:scale-[.96]
+            active:scale-[.96]
             lg:hover:bg-white/90 lg:hover:text-black
           `}
         >
@@ -64,7 +65,7 @@ import { MdEmail } from 'react-icons/md'
           target="_blank"
           download="Cristobal Valderrama"
           class={`
-            w-full h-auto py-3 px-8 bg-white/10 gap-x-4 active:scale-[.96]
+            active:scale-[.96]
             lg:hover:bg-white/90 lg:hover:text-black
           `}
         >
@@ -73,12 +74,12 @@ import { MdEmail } from 'react-icons/md'
       </div>
     </div>
     <div class={`
-      transition-all ease-in-out duration-500 transform pt-10 w-full h-auto flex justify-center items-center rounded-3xl
+      transition-all ease-in-out duration-500 transform py-10 w-full h-full flex justify-center items-center rounded-3xl
       lg:h-full lg:hover:ml-28 lg:hover:-translate-x-32 lg:pt-0 lg:hover:scale-105 lg:hover:shadow-inner lg:hover:bg-white/10
     `}>
       <img src="cris.webp" alt="Imagen Cristobal Valderrama tono gris" class={`
         rounded-lg h-72 w-auto 
-        lg:h-[22rem]
+        lg:h-[25rem]
       `}>
     </div>
   </div>
