@@ -9,16 +9,16 @@ import { FaGithub } from 'react-icons/fa'
 <!-- 01E5E6 cyan -->
 <div
   class={`
-    flex bg-white/10 text-white w-80 h-auto rounded flex-col items-center transition-all transform duration-[1000ms] ease-in-out 
-    hover:duration-[1000ms] hover:bg-white/20 hover:w-full hover:h-auto hover:my-2 
-    [&>div>div]:lg:hover:block lg:border lg:border-white/10 lg:mr-10 lg:h-28 lg:hover:h-auto lg:hover:shadow lg:hover:scale-105 lg:w-[26rem]`}
+    flex bg-white/10 top-0 text-white w-80 h-auto rounded flex-col items-center transition-all transform duration-[700ms] ease-in-out 
+    hover:duration-[500ms] hover:transition-all hover:bg-white/20 hover:w-[26rem] hover:h-full
+    [&>div>div]:lg:hover:block lg:border lg:border-white/10 lg:mr-10 lg:h-28 lg:hover:h-auto lg:hover:scale-105 lg:w-[26rem]`}
 > 
   <div class={`
     flex flex-col items-center py-6 ease-in-out transition-all w-full px-10
-    [&>div]:lg:hidden 
+    [&>div]:lg:hidden lg:flex lg:flex-col lg:items-center lg:justify-between lg:h-full
   `}>
     <h2 class="text-white text-center text-xl font-text3">{title}</h2>
-    <div class="flex flex-col items-center h-auto w-full">
+    <div class="flex flex-col items-center h-full w-full">
       <div class="flex h-full w-full py-1">
         <p class={`
           text-md text-white/50 text-justify tracking-tight px-4 font-text2
@@ -32,11 +32,11 @@ import { FaGithub } from 'react-icons/fa'
     >
       <div class="w-full">
         <ul
-          class="grid grid-cols-3 grid-auto-rows text-white text-center gap-3 py-3 px-3 w-full"
+          class="grid grid-cols-3 grid-auto-rows text-white text-center gap-1 py-3 px-3 w-full"
         >
           {
             tech.map((item) => (
-              <li class="bg-white/10 rounded-full w-full px-4 text-sm truncate font-text1">
+              <li class="bg-white/10 rounded-full w-full h-6 text-center px-4 py-1 text-[0.7rem] truncate font-text1">
                 {item}
               </li>
             ))
