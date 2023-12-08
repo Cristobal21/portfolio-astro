@@ -1,0 +1,14 @@
+---
+const { img, nombre, texto, altImg } = Astro.props
+
+---
+
+<section class="w-80 h-full flex flex-col">
+  <div class="w-full h-40 flex justify-center">
+    <img src={img} alt={altImg} class="rounded-full">
+  </div>
+  <div class="w-full h-full">
+    <h2 class="text-xl text-white text-center pt-8 pb-4">{nombre}</h2>
+    <p class="text-white text-md w-full px-4">{texto}</p>
+  </div>
+</section>

@@ -6,10 +6,10 @@ import CardProject from "./CardProject.astro";
   h-screen w-screen relative overflow-hidden
   lg:flex lg:flex-col lg:items-center
 `}>
-  <h1 class={`
+  <h2 class={`
     text-white text-3xl text-center font-light pt-10 font-text3 
     lg:text-5xl lg:font-text2 lg:pt-28 lg:w-full
-  `}>Proyectos Personales</h1>
+  `}>Proyectos Personales</h2>
   <div class="lg:h-full lg:z-30 lg:w-full">
     <div
       class={`
@@ -34,7 +34,7 @@ import CardProject from "./CardProject.astro";
       <CardProject
         title="Weather App"
         description="Buscador que muestra la información del clima de algún lugar de latinoamerica, los datos se obtienen de OpenWeather API."
-        tech={["Bootstrap", "Javascript", "React", "Css", "Api"]}
+        tech={["Bootstrap", "Javascript", "React", "Tailwindcss", "Api"]}
         urlApp="https://weather-latino.netlify.app/"
         urlGithub="https://github.com/Cristobal21/Weather-app"
       />

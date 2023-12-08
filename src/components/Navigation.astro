@@ -3,15 +3,14 @@
   hidden
   lg:flex lg:justify-center lg:w-screen lg:fixed lg:h-10 lg:py-3 lg:top-0 lg:z-40 font-text1
 `}>
-  <nav class="pt-3">
+  <nav class="pt-3 flex justify-center items-center">
     <ul class={`
-      text-lg flex justify-center items-center text-white transition-all 
-      [&>li]:px-3 [&>li]:rounded-lg
+      text-lg flex justify-center items-center text-white transition-all
+      [&>li]:px-3 [&>li]:rounded-lg [&>li]:text-center
     `}>
       <li><a href="#home" class="active:scale-95 hover:animate-pulse">Inicio</a></li>
       <li><a href="#projects" class="active:scale-95 hover:animate-pulse">Experiencia</a></li>
       <li><a href="#about" class="active:scale-95 hover:animate-pulse">Sobre Mí</a></li>
-      <li><a href="#contact" class="active:scale-95 hover:animate-pulse lg:hidden">Contacto</a></li>
     </ul>
   </nav>
   <div

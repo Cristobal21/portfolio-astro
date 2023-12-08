@@ -1,0 +1,26 @@
+---
+import CardCredit from "./CardCredit.astro";
+---
+
+<section id="mentors" class="h-screen w-screen flex flex-col items-center">
+  <h2 class={`
+    text-center text-3xl w-full text-white font-light py-8 font-text3 visible
+    lg:text-5xl lg:font-text2 lg:pt-28 lg:w-full
+  `}>Mentores</h2>
+  <div class={`
+    grid grid-cols-2 grid-flow-rows place-items-center
+    lg:grid lg:grid-cols-4 lg:grid-flow-rows lg:items-start lg:justify-between lg:gap-4 lg:w-full lg:px-32 lg:h-full
+  `}>
+    <!-- <div class="flex flex-col gap-y-4 w-48 h-48 border rounded-full my-4">
+      <img src="#" alt="Imagen de Midudev - Desarrollador de Web & Streamer de Desarrollo de Software">
+      <p>Longi jato readi de corte saque hermano fineza chantar detonao fierro zorra abrazo pa lo amigo balazo pa lo enemigo zarpao. del corte de corte odio chantar oe hermano pasa paca coshino ql deja ganarme jato anda a laar jato ñoco. A treh deo despavila el moco washas tenis mano? de vio odio washas shilamediavola zoronca. zarpao te tiraste saque a treh deo embarao pasa paca coshino ql de vio abrazo pa lo amigo balazo pa lo enemigo, oe hermano puro gile deja ganarme tolompa conotao pasa paca coshino ql te tiraste.</p>
+    </div> -->
+    <CardCredit 
+      img="./mentors/midudev.webp"
+      nombre="Miguel Ángel Durán"
+      texto="Ingeniero de Software, Programador Web y Divulgador sobre Programación."
+      altImg="Imagen de Midudev"
+    />
+    //TODO: falta completar los demas mentores, Fernando Herrera, Nicolas Schurman, Alejandro Prado
+  </div>
+</section>
