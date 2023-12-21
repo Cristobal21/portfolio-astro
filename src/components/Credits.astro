@@ -1,12 +1,5 @@
 ---
-import CardCredit from './CardCredit.astro'
-import { FaLinkedin } from 'react-icons/fa'
-import { FaGithub } from 'react-icons/fa'
-import { FaYoutube } from 'react-icons/fa'
-import { FaTwitch } from 'react-icons/fa'
-import { FaInstagram } from 'react-icons/fa'
-import { FaXTwitter } from 'react-icons/fa6'
-// import { FaTwitter } from 'react-icons/fa'
+import SocialMentors from './SocialMentors.astro'
 ---
 
 <section id="credits" class="h-screen w-screen flex flex-col items-center">
@@ -14,88 +7,13 @@ import { FaXTwitter } from 'react-icons/fa6'
     text-center text-3xl w-full text-white font-light py-8 font-text3 visible
     lg:text-5xl lg:font-text2 lg:pt-28 lg:w-full
   `}>Mentores</h2>
-  <p class="text-white text-2xl py-3 px-4 bg-teal-600">TODO: Falta agregarle estilos de hover a las redes sociales y su responsive</p>
   <div class={`
     flex flex-col place-items-center overflow-auto gap-y-4 pb-20
     lg:grid lg:grid-cols-4 lg:grid-flow-rows lg:items-start lg:justify-between lg:gap-4 lg:w-full lg:px-32 lg:h-full lg:pt-4
-    [&>div>div]:bg-white/25 [&>div>div]:py-3 [&>div>div]:px-5 [&>div>div]:rounded-xl [&>div]:gap-y-2 [&>div]:flex [&>div]:flex-col
+    [&>div]:flex [&>div]:flex-col [&>div]:w-80 
+    [&>div>div]:bg-white/10 [&>div>div]:lg:bg-black/10 [&>div>div]:transition-all [&>div>div]:py-2 [&>div>div]:h-10 [&>div>div]:px-5 [&>div>div]:lg:rounded-xl [&>div>div]:flex [&>div>div]:flex-row [&>div>div]:justify-center [&>div>div]:items-center [&>div>div]:gap-x-2
+    [&>div>div>a]:text-white [&>div>div>a]:transition-all [&>div>div>a]:lg:invisible
   `}>
-    <div>
-      <CardCredit 
-        img="./mentors/midudev.webp"
-        nombre="Miguel Ángel Durán"
-        texto="Ingeniero de Software, Programador Web y Divulgador sobre Programación."
-        altImg="Imagen de Midudev"
-      />
-      <div class={`
-        flex flex-row justify-center py-4 gap-x-2
-        [&>a]:text-white
-      `}>
-        <a href="https://es.linkedin.com/in/midudev" target="_blank"><FaLinkedin /></a>
-        <a href="https://github.com/midudev" target="_blank"><FaGithub /></a>
-        <a href="https://www.youtube.com/c/midudev" target="_blank"><FaYoutube /></a>
-        <a href="https://www.twitch.tv/midudev" target="_blank"><FaTwitch /></a>
-        <a href="https://www.instagram.com/midu.dev/" target="_blank"><FaInstagram /></a>
-        <a href="https://twitter.com/midudev" target="_blank"><FaXTwitter /></a>
-      </div>
-    </div>
-    <div>
-      <CardCredit 
-        img="./mentors/nicolas.webp"
-        nombre="Nicolás Schurmann"
-        texto="Ingeniero e instructor de software."
-        altImg="Imagen de Nicolas Schurmann"
-      />
-      <div class={`
-        flex flex-row justify-center py-4 gap-x-2
-        [&>a]:text-white
-      `}>
-        <a class="hover:bg-blue-500" href="https://nz.linkedin.com/in/nicolasschurmann" target="_blank"><FaLinkedin /></a>
-        <a href="https://github.com/nschurmann" target="_blank"><FaGithub /></a>
-        <a href="https://www.youtube.com/c/HolaMundoDev" target="_blank"><FaYoutube /></a>
-        <a href="https://twitter.com/_nasch_?lang=es" target="_blank"><FaXTwitter /></a>
-      </div>
-    </div>
-    <div>
-      <CardCredit 
-        img="./mentors/fernando.webp"
-        nombre="Fernando Herrera"
-        texto="Desarrollador Full Stack y profesor."
-        altImg="Imagen de Fernando Herrera"
-      />
-      <div class={`
-        flex flex-row justify-center py-4 gap-x-2
-        [&>a]:text-white
-      `}>
-        <a href="https://ca.linkedin.com/in/fernando-herrera-b6b204200" target="_blank"><FaLinkedin /></a>
-        <a href="https://github.com/Klerith" target="_blank"><FaGithub /></a>
-        <a href="https://www.youtube.com/channel/UCuaPTYj15JSkETGnEseaFFg" target="_blank"><FaYoutube /></a>
-        <a href="https://twitter.com/Fernando_Her85" target="_blank"><FaXTwitter /></a>
-      </div>
-    </div>
-    <div>
-      <CardCredit 
-        img="./mentors/alejandro.webp"
-        nombre="Alejandro Prado"
-        texto="Desarrollador Full Stack."
-        altImg="Imagen de Alejandro Prado"
-      />
-      <div class={`
-        flex flex-row justify-center py-4 gap-x-2
-        [&>a]:text-white
-      `}>
-        <a href="https://cl.linkedin.com/in/alejandro-prado-prado" target="_blank"><FaLinkedin /></a>
-      </div>
-    </div>
+    <SocialMentors />
   </div>
-
-  <!-- <div class={`
-    w-full
-    lg:rounded-lg lg:w-auto lg:h-auto lg:flex lg:flex-col lg:gap-y-2
-    lg:[&>p]:px-8 lg:[&>p]:py-1 lg:[&>p]:text-white lg:[&>p]:text-lg lg:[&>p]:w-auto lg:[&>p]:bg-white/30 lg:[&>p]:rounded-lg 
-  `}>
-    <p>Estas son algunas personas de las que he aprendido muchísimo con sus enseñanzas.</p>
-    <p>Con ellos he adquirido muchos conocimientos y aprendido diferentes habilidades.</p>
-    <p>Una manera de poder agredecerles es dándoles un pequeño es espacio de reconocimiento en mi Web Personal.</p>
-  </div> -->
 </section>
