@@ -3,11 +3,12 @@ const { title, text, clases } = Astro.props
 ---
 
 <div class={`
-  hover:bg-white/5
-  lg:hover:shadow-inner lg:hover:bg-white/10 lg:hover:w-full lg:hover:-translate-y-3 overflow-auto flex justify-center items-center
+  hover:scale-[1.01]
+  overflow-auto flex justify-center items-center
+  lg:hover:shadow lg:hover:bg-[#03687F] lg:hover:h-[17rem]
   [&>p]:lg:hover:visible [&>h2]:lg:hover:invisible 
   [&>p]:active:visible [&>h2]:active:invisible
 `}>
   <h2 class="w-full absolute text-center text-4xl lg:text-5xl">{title}</h2>
-  <p class="invisible w-full h-auto px-2 hover:transition-all text-ellipsis text-sm lg:text-lg">{text}</p> 
+  <p class="invisible w-full h-auto px-6 hover:transition-all text-ellipsis text-sm lg:text-xl">{text}</p> 
 </div>

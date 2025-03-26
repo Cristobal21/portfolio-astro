@@ -1,33 +1,36 @@
 ---
-const { title, description, tech, urlApp, urlGithub } = Astro.props;
+const { title, description, tech, urlApp, urlGithub, path_img } = Astro.props;
 import { FaGithub } from 'react-icons/fa'
 ---
 
 
 <!-- FF0380 magenta --> 
 <!-- 01E5E6 cyan -->
+ <!-- 062d40 BG html -->
 <div
   class={`
-    flex bg-white/10 top-0 text-white w-80 h-auto rounded flex-col items-center transition-all transform duration-[700ms] ease-in-out 
-    hover:transition-all hover:bg-white/20 hover:w-[26rem] hover:h-full
-    [&>div>div]:lg:hover:block lg:border lg:border-white/10 lg:mr-10 lg:h-28 lg:hover:h-auto lg:w-[26rem] lg:hover:ease-out lg:hover:duration-[1000ms] lg:hover:-translate-y-4 lg:hover:border-white/40`}
+    flex justify-center bg-cyan-950 top-0 text-white w-full transition-all transform duration-700 ease-in-out 
+    lg:mx-10 lg:h-[16rem] lg:rounded lg:w-full 
+    lg:hover:shadow-2xl lg:hover:h-[18rem] lg:hover:bg-cyan-900 lg:hover:z-50 lg:hover:transition-all lg:hover:ease-out lg:hover:duration-700
+    [&>div>div]:lg:hover:block [&>div>div]:lg:transition-all `}
 > 
   <div class={`
     flex flex-col items-center py-6 ease-in-out transition-all w-full px-10
-    [&>div]:lg:hidden lg:flex lg:flex-col lg:items-center lg:justify-between lg:h-full
+    [&>div]:lg:hidden lg:flex lg:flex-col lg:items-center lg:justify-between lg:h-full [&>img]:hover:hidden
   `}>
-    <h2 class="text-white text-center text-xl font-text3">{title}</h2>
-    <div class="flex flex-col items-center h-full w-full">
+    <h2 class="text-white text-center text-xl font-text3 py-2">{title}</h2>
+    <img src={path_img} alt="Imagen de Proyecto" class="rounded-full w-auto h-[10rem] bg-white p-4" />
+    <div class="flex flex-col items-center h-full w-full transition-all duration-1000">
       <div class="flex h-full w-full py-1">
         <p class={`
-          text-md text-white/50 text-justify tracking-tight px-4 font-text2
+          text-md text-white/80 text-justify tracking-tight px-4 font-textRegular
         `}>
           {description}
         </p>
       </div>
     </div>
     <div
-      class='flex flex-col justify-between text-center [&>div>div>a]:text-lg [&>div>div>a]:border [&>div>div>a]:w-auto [&>div>div>a]:transition-all [&>div>div>a]:py-1 [&>div>div>a]:rounded'
+      class='flex flex-col justify-between text-center [&>div>div>a]:text-lg [&>div>div>a]:border-none [&>div>div>a]:w-auto [&>div>div>a]:transition-all [&>div>div>a]:py-1 [&>div>div>a]:rounded'
     >
       <div class="w-full">
         <ul
@@ -41,7 +44,7 @@ import { FaGithub } from 'react-icons/fa'
             ))
           }
         </ul>
-        <div class="flex justify-center gap-x-4">
+        <div class="flex justify-center gap-x-4 pt-2">
           <a
             href={urlApp}
             target="_blank"

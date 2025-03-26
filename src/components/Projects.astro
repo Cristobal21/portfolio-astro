@@ -4,17 +4,17 @@ import CardProject from "./CardProject.astro";
 
 <section id="projects" class={`
   h-screen w-screen relative overflow-hidden
-  lg:flex lg:flex-col lg:items-center
+  lg:flex lg:flex-col lg:items-center lg:h-screen
 `}>
-  <h2 class={`
+  <!-- <h2 class={`
     text-white text-3xl text-center font-light pt-10 font-text3 
     lg:text-5xl lg:font-text2 lg:pt-28 lg:w-full
-  `}>Proyectos Personales</h2>
-  <div class="lg:h-full lg:z-30 lg:w-full">
+  `}>Proyectos Personales</h2> -->
+  <div class="lg:h-full lg:w-full lg:flex lg:justify-center lg:items-center">
     <div
       class={`
-        flex flex-col justify-between pt-10 gap-y-6 items-center pb-10 max-h-[44rem] overflow-y-auto scroll-behavior-smooth w-full px-6 transition-all
-        lg:max-h-full lg:overflow-hidden lg:flex lg:flex-row lg:justify-center lg:items-start lg:pt-28 lg:h-full
+        flex flex-col justify-between items-center overflow-y-auto scroll-behavior-smooth w-full px-36 transition-all
+        lg:overflow-hidden lg:transition-all lg:px-20 lg:gap-4 lg:grid lg:grid-cols-3 lg:grid-flow-row lg:py-32 lg:h-full lg:place-items-center lg:w-full
       `}
     >
       <CardProject
@@ -23,13 +23,15 @@ import CardProject from "./CardProject.astro";
         tech={["Tailwindcss", "Javascript", "React", "Node JS", "MongoDB"]}
         urlApp="#"
         urlGithub="#"
+        path_img="/projects/despachos_logo.webp"
       />
       <CardProject
         title="Landing Page - Tesla"
-        description="Landing page de tesla.com, la hice junto a mi streamer favorito de Desarrollo Web, Midudev, en un stream en vivo."
+        description="Landing page de tesla.com, se ha desarrollado en un stream en vivo junto a mi streamer de Desarrollo Web preferido, Midudev."
         tech={["Tailwindcss", "Javascript", "Astro"]}
         urlApp="https://teslanding.netlify.app"
         urlGithub="https://github.com/Cristobal21/landing-tesla"
+        path_img="/projects/tesla_logo.webp"
       /> 
       <CardProject
         title="Weather App"
@@ -37,6 +39,24 @@ import CardProject from "./CardProject.astro";
         tech={["Bootstrap", "Javascript", "React", "Tailwindcss", "Api"]}
         urlApp="https://weather-latino.netlify.app/"
         urlGithub="https://github.com/Cristobal21/Weather-app"
+        path_img="/projects/weatherApp_logo.webp"
+      />
+      <CardProject
+        title="Seguros GC"
+        description="Página Web personal y laboral de Gonzalo Contreras. Agente de Seguros."
+        tech={["Astro", "Tailwindcss",]}
+        urlApp="#"
+        urlGithub="https://github.com/Cristobal21/gonza"
+        path_img="/projects/gonza_logo.webp"
+      />
+      <CardProject
+        title="SeguryRed"
+        description="Página web laboral y profesional de tipo Landing Page de la empresa de Seguridad y Televigilancia, SeguryRed."
+        tech={["Astro", "Tailwindcss"]}
+        urlApp="#"
+        urlGithub="https://github.com/Cristobal21/segury-red"
+        path_img="/projects/seguryred_logo.webp"
+
       />
     </div>
   </div>

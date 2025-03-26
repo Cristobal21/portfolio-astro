@@ -8,7 +8,8 @@ module.exports = {
 				title2: ['FontMajor','Major Mono Display','monospace'],
 				text1: ['FontLight','sans-serif'],
 				text2: ['FontBook','sans-serif'],
-				text3: ['FontMedium','sans-serif']
+				text3: ['FontMedium','sans-serif'],
+				textRegular: ['FontRegular', 'sans-serif'],
 			},
 		},
 	},

@@ -14,37 +14,73 @@ const elem = ['Anime (One Piece es mi preferido) 👍',
 
 <section id="about" class={`
   h-screen w-screen flex flex-col items-center
-  lg:flex lg:justify-center lg:items-center lg:overflow-hidden lg:h-screen lg:w-full
+  lg:flex lg:justify-center lg:items-center lg:place-items-center lg:overflow-hidden lg:h-screen lg:w-screen
 `}>
-  <h2 class={`
+  <!-- <h2 class={`
     text-center text-3xl w-full text-white font-light py-8 font-text3 visible
     lg:text-5xl lg:font-text2 lg:pt-28 lg:w-full
-  `}>Un poco sobre mí</h2>
+  `}>Un poco sobre mí</h2> -->
   <div class={`
     px-10 h-full flex flex-col items-center overflow-y-auto pb-10 gap-y-2
-    lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:gap-4 lg:pb-20 lg:w-[1000px] lg:h-full lg:max-h-full lg:pt-10 
-    [&>div]:lg:h-full [&>div]:rounded-lg [&>div]:lg:text-lg [&>div]:transition-all [&>div]:ease-in-out [&>div]:duration-700 [&>div]:bg-cyan-900 [&>div]:flex [&>div]:justify-center [&>div]:items-center [&>div]:text-white [&>div]:transform [&>div]:lg:w-full [&>div]:lg:px-10 
+    lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:gap-4 lg:w-full lg:h-full lg:max-h-full lg:py-40 lg:px-40
+    [&>div]:lg:h-full [&>div]:rounded-lg [&>div]:transition-all [&>div]:ease-in-out [&>div]:duration-700 [&>div]:bg-[#03485F] [&>div]:flex [&>div]:justify-center [&>div]:items-center [&>div]:text-white [&>div]:transform [&>div]:lg:w-full [&>div]:lg:px-10 
     [&>div]:h-full [&>div]:w-80
   `}>
-    <CardAbout title="Personal" text="Nacido y criado en Chile desde 1995, hasta la presente fecha. Disfruto viendo anime, películas, y jugando videojuegos con mis amigos."/>
-    <CardAbout title="Estudios" text="Estoy titulado como Analista Programador Computacional, y lo que más disfruté aprender fue Desarrollo y Diseño de Aplicaciones Web, en ese momento fue cuando aprendí sobre Javascript, me gustó tanto que después de titularme me puse a estudiar de manera autodidacta todo lo que tuviera relación con el Desarrollo Web."/>
+    <CardAbout title="Personal" text="Nacido y criado en Chile desde 1995 hasta la presente fecha. Disfruto ver anime, películas, y jugar videojuegos con mis amigos, entre otras cosas."/>
+    <CardAbout title="Estudios" text="Estoy titulado como Analista Programador Computacional y lo que más disfruté aprender fue Desarrollo y Diseño de Aplicaciones Web, fue en ese entonces que después de mi Titulación comencé a estudiar de manera autodidacta todo lo que tuviera relación con el Desarrollo Web."/>
     <div class={`
-      hover:bg-white/5
-      lg:hover:shadow-inner lg:hover:bg-white/10 lg:hover:w-full lg:hover:-translate-y-3 overflow-auto flex justify-center items-center
+      hover:bg-[#03485F]
+      lg:hover:shadow lg:hover:bg-[#03687F] lg:hover:w-full lg:hover:h-[17rem] lg:hover:scale-[1.01] overflow-auto flex justify-center items-center
       [&>ul>li]:lg:hover:visible [&>h2]:lg:hover:invisible 
       [&>ul>li]:active:visible [&>h2]:active:invisible
     `}>
       <h2 class="w-full absolute text-center text-4xl lg:text-5xl">Pasatiempos</h2>
-      <ul class="flex flex-col gap-y-2 [&>li]:invisible [&>li]:w-full [&>li]:h-auto [&>li]:hover:transition-all [&>li]:text-ellipsis [&>li]:lg:text-base">
-        <li><strong>Anime</strong> (One Piece es mi preferido) 👍</li>
-        <li><strong>Películas</strong> (Cine de terror y comedia) 💀</li>
-        <li><strong>Aire libre</strong> (Pasear al perro y andar en bicicleta) 🚴‍♂️</li>
-        <li><strong>Lectura</strong> (Auto-conocimiento y webcomics) 📖</li>
-        <li><strong>Programación</strong> (Aprendiendo cada día) 💻</li>
-        <li><strong>Ejercicio</strong> (Lo suficiente para mantenerme sano) 🏋️</li>
+      <ul class="flex flex-col gap-y-2 [&>li]:invisible [&>li]:w-full [&>li]:h-auto [&>li]:hover:transition-all [&>li]:text-ellipsis [&>li]:lg:text-xl">
+        <li class="flex justify-start items-center gap-x-2">
+          <p class="text-lg flex justify-center items-center gap-x-3">
+            <img src="/icons/skull.svg" alt="Icon de Calavera">
+            Anime
+          </p>
+          <p class="text-sm">(One Piece)</p>
+        </li>
+        <li class="flex justify-start items-center gap-x-2">
+          <p class="text-lg flex justify-center items-center gap-x-3">
+            <img src="/icons/movie.svg" alt="Icon de movie">
+            Películas
+          </p>
+          <p class="text-sm">(Terror & Comedia)</p>
+        </li>
+        <li class="flex justify-start items-center gap-x-2">
+          <p class="text-lg flex justify-center items-center gap-x-3">
+            <img src="/icons/beach.svg" alt="Icon de Aire Libre">
+            Aire libre
+          </p>
+          <p class="text-sm">(Pasear al perro y andar en bicicleta)</p>
+        </li>
+        <li class="flex justify-start items-center gap-x-2">
+          <p class="text-lg flex justify-center items-center gap-x-3">
+            <img src="/icons/book.svg" alt="Icon de Libro">
+            Lectura
+          </p>
+          <p class="text-sm">(Auto-conocimiento, Webcomics y Programación)</p>
+        </li>
+        <li class="flex justify-start items-center gap-x-2">
+          <p class="text-lg flex justify-center items-center gap-x-3">
+            <img src="/icons/pc.svg" alt="Icon de Computador">
+            Programación
+          </p>
+          <p class="text-sm">(Aprendiendo cada día)</p>
+        </li>
+        <li class="flex justify-start items-center gap-x-2">
+          <p class="text-lg flex justify-center items-center gap-x-3">
+            <img src="/icons/gym.svg" alt="Icon de Ejercicio">
+            Ejercicio
+          </p>
+          <p class="text-sm">(A veces)</p>
+        </li>
       </ul>
     </div>
-    <CardAbout title="Profesional" text="Hasta el momento no tengo experiencia laboral, por lo mismo es que me mantengo estudiando de manera constante intentando aprender un poquito mas cada día."/>
+    <CardAbout title="Profesional" text="Sin experiencia laboral en el rubro por el momento, mientras tanto me mantengo estudiando y aprendiendo para mejorar cada día."/>
   </div>
 </section>
 
