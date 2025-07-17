@@ -4,12 +4,12 @@ const { img, nombre, texto, altImg } = Astro.props
 ---
 
 <section class={`
-  flex flex-col w-full
+  flex flex-col w-full transition-all
   lg:w-full lg:h-[20rem] lg:flex lg:flex-col lg:bg-black/30 lg:rounded-t-lg
 `}>
-  <div class="w-full h-40 flex justify-center">
+  <section class="w-full h-40 flex justify-center">
     <img src={img} alt={altImg} class="rounded-full h-auto w-36 mt-5">
-  </div>
+  </section>
   <div class="w-full h-full text-white pb-4">
     <h2 class="text-xl text-center pt-8 pb-4">{nombre}</h2>
     <p class="text-md w-full px-4 text-center ">{texto}</p>

@@ -1,79 +1,114 @@
 ---
 import CardCredit from "./CardCredit.astro";
-import { FaLinkedin } from 'react-icons/fa'
-import { FaGithub } from 'react-icons/fa'
-import { FaYoutube } from 'react-icons/fa'
-import { FaTwitch } from 'react-icons/fa'
-import { FaInstagram } from 'react-icons/fa'
-import { FaXTwitter } from 'react-icons/fa6'
 ---
 
 <section class={`
-  flex flex-col items-center overflow-auto gap-y-4
-  lg:grid lg:grid-cols-4 lg:grid-flow-rows lg:items-start lg:justify-between lg:gap-x-2 lg:w-full lg:px-32 lg:h-full lg:pt-4
+  flex flex-col items-center overflow-auto gap-y-4 h-screen w-screen py-10
+  lg:flex lg:flex-row lg:items-center lg:justify-center lg:gap-x-10 lg:w-full lg:h-full
 `}>
+<!-- Nicolas Schurmann -->
+<div class={`transition-all
+  bg-black/30 rounded-xl w-96 h-auto
+  lg:flex lg:flex-col lg:items-center lg:bg-transparent lg:justify-center lg:transform lg:w-full lg:duration-700
+  lg:hover:duration-1000 lg:hover:bg-black/10 lg:hover:transition-all`}>
+  <CardCredit 
+    img="./mentors/nicolas.webp"
+    nombre="Nicolás Schurmann"
+    texto="Ingeniero e Instructor de Software."
+    altImg="Imagen de Nicolas Schurmann"
+  />
+  <div class={`
+    transition-all w-full flex justify-center items-center gap-x-4 py-3
+    lg:bg-black/30 lg:h-10 lg:py-6 lg:w-full lg:rounded-b-lg lg:flex lg:justify-center lg:items-center lg:gap-x-4
+  [&>a]:text-white [&>a]:transition-all [&>a]:p-1
+  `}>
+    <a class="hover:bg-white/20 hover:scale-150 hover:rounded-full" href="https://nz.linkedin.com/in/nicolasschurmann" target="_blank">
+      <img src="/icons/linkedin.svg" alt="Icon de LinkedIn">
+    </a>
+    <a class="hover:bg-white/20 hover:scale-150 hover:rounded-full" href="https://github.com/nschurmann" target="_blank">
+      <img src="/icons/github.svg" alt="Icon de GitHub">
+    </a>
+    <a class="hover:bg-white/20 hover:scale-150 hover:rounded-full" href="https://www.youtube.com/c/HolaMundoDev" target="_blank">
+      <img src="/icons/youtube.svg" alt="Icon de Youtube">
+    </a>
+    <a class="hover:bg-white/20 hover:scale-150 hover:rounded-full" href="https://twitter.com/_nasch_?lang=es" target="_blank">
+      <img src="/icons/x.svg" alt="Icon de X">
+    </a>
+  </div>
+</div>
+
 <!-- Midudev -->
   <div class={`
-    lg:flex lg:flex-col lg:items-center lg:justify-center lg:transform lg:w-full`}>
+    transition-all bg-black/30 rounded-xl w-96 h-auto
+    lg:flex lg:flex-col lg:items-center lg:bg-transparent lg:justify-center lg:transform lg:w-full lg:duration-700
+    lg:hover:transition-all lg:hover:bg-black/10 lg:hover:duration-1000`}>
     <CardCredit 
       img="./mentors/midudev.webp"
       nombre="Miguel Ángel Durán"
       texto="Ingeniero de Software, Programador Web y Divulgador sobre Programación."
       altImg="Imagen de Midudev"
     />
-    <div class={`transition-all bg-black/30 w-full
-      lg:h-10 lg:py-6 lg:w-full lg:rounded-b-lg lg:flex lg:justify-center lg:items-center lg:gap-x-5
+    <div class={`
+      transition-all w-full flex justify-center items-center gap-x-4 py-3
+      lg:bg-black/30 lg:h-10 lg:py-6 lg:w-full lg:rounded-b-lg lg:flex lg:justify-center lg:items-center lg:gap-x-4
     [&>a]:text-white [&>a]:transition-all [&>a]:p-1
     `}>
-      <a class="hover:bg-white/20 hover:scale-150 hover:rounded-full" href="https://es.linkedin.com/in/midudev" target="_blank"><FaLinkedin /></a>
-      <a class="hover:bg-white/20 hover:scale-150 hover:rounded-full" href="https://github.com/midudev" target="_blank"><FaGithub /></a>
-      <a class="hover:bg-white/20 hover:scale-150 hover:rounded-full" href="https://www.youtube.com/c/midudev" target="_blank"><FaYoutube /></a>
-      <a class="hover:bg-white/20 hover:scale-150 hover:rounded-full" href="https://www.twitch.tv/midudev" target="_blank"><FaTwitch /></a>
-      <a class="hover:bg-white/20 hover:scale-150 hover:rounded-full" href="https://www.instagram.com/midu.dev/" target="_blank"><FaInstagram /></a>
-      <a class="hover:bg-white/20 hover:scale-150 hover:rounded-full" href="https://twitter.com/midudev" target="_blank"><FaXTwitter /></a>
+      <a class="hover:bg-white/20 hover:scale-150 hover:rounded-full" href="https://es.linkedin.com/in/midudev" target="_blank">
+        <img src="/icons/linkedin.svg" alt="Icon de LinkedIn">
+      </a>
+      <a class="hover:bg-white/20 hover:scale-150 hover:rounded-full" href="https://github.com/midudev" target="_blank">
+        <img src="/icons/github.svg" alt="Icon de GitHub">
+      </a>
+      <a class="hover:bg-white/20 hover:scale-150 hover:rounded-full" href="https://www.youtube.com/c/midudev" target="_blank">
+        <img src="/icons/youtube.svg" alt="Icon de Youtube">
+      </a>
+      <a class="hover:bg-white/20 hover:scale-150 hover:rounded-full" href="https://www.twitch.tv/midudev" target="_blank">
+        <img src="/icons/twitch.svg" alt="Icon de Twitch">
+      </a>
+      <a class="hover:bg-white/20 hover:scale-150 hover:rounded-full" href="https://www.instagram.com/midu.dev/" target="_blank">
+        <img src="/icons/instagram.svg" alt="Icon de Instagram">
+      </a>
+      <a class="hover:bg-white/20 hover:scale-150 hover:rounded-full" href="https://twitter.com/midudev" target="_blank">
+        <img src="/icons/x.svg" alt="Icon de X">
+      </a>
     </div>
   </div>
-<!-- Nicolas Schurmann -->
-  <div class={`
-    lg:flex lg:flex-col lg:items-center lg:justify-center lg:transform lg:w-full`}>
-    <CardCredit 
-      img="./mentors/nicolas.webp"
-      nombre="Nicolás Schurmann"
-      texto="Ingeniero e Instructor de Software."
-      altImg="Imagen de Nicolas Schurmann"
-    />
-    <div class={`transition-all bg-black/30 w-full
-      lg:h-10 lg:py-6 lg:w-full lg:rounded-b-lg lg:flex lg:justify-center lg:items-center lg:gap-x-5
-    [&>a]:text-white [&>a]:transition-all [&>a]:p-1
-    `}>
-      <a class="hover:bg-white/20 hover:scale-150 hover:rounded-full" href="https://nz.linkedin.com/in/nicolasschurmann" target="_blank"><FaLinkedin /></a>
-      <a class="hover:bg-white/20 hover:scale-150 hover:rounded-full" href="https://github.com/nschurmann" target="_blank"><FaGithub /></a>
-      <a class="hover:bg-white/20 hover:scale-150 hover:rounded-full" href="https://www.youtube.com/c/HolaMundoDev" target="_blank"><FaYoutube /></a>
-      <a class="hover:bg-white/20 hover:scale-150 hover:rounded-full" href="https://twitter.com/_nasch_?lang=es" target="_blank"><FaXTwitter /></a>
-    </div>
-  </div>
+
 <!-- Fernando Herrera -->
   <div class={`
-    lg:flex lg:flex-col lg:items-center lg:justify-center lg:transform lg:w-full`}>
+    transition-all bg-black/30 rounded-xl w-96 h-auto
+    lg:flex lg:flex-col lg:items-center lg:bg-transparent lg:justify-center lg:transform lg:w-full lg:duration-700
+    lg:hover:transition-all lg:hover:bg-black/10 lg:hover:duration-1000`}>
     <CardCredit 
       img="./mentors/fernando.webp"
       nombre="Fernando Herrera"
       texto="Desarrollador Full Stack y profesor."
       altImg="Imagen de Fernando Herrera"
     />
-    <div class={`transition-all bg-black/30 w-full
-      lg:h-10 lg:py-6 lg:w-full lg:rounded-b-lg lg:flex lg:justify-center lg:items-center lg:gap-x-5
+    <div class={`
+      transition-all w-full flex justify-center items-center gap-x-4 py-3
+      lg:bg-black/30 lg:h-10 lg:py-6 lg:w-full lg:rounded-b-lg lg:flex lg:justify-center lg:items-center lg:gap-x-4
     [&>a]:text-white [&>a]:transition-all [&>a]:p-1
     `}>
-      <a class="hover:bg-white/20 hover:scale-150 hover:rounded-full" href="https://ca.linkedin.com/in/fernando-herrera-b6b204200" target="_blank"><FaLinkedin /></a>
-      <a class="hover:bg-white/20 hover:scale-150 hover:rounded-full" href="https://github.com/Klerith" target="_blank"><FaGithub /></a>
-      <a class="hover:bg-white/20 hover:scale-150 hover:rounded-full" href="https://www.youtube.com/channel/UCuaPTYj15JSkETGnEseaFFg" target="_blank"><FaYoutube /></a>
-      <a class="hover:bg-white/20 hover:scale-150 hover:rounded-full" href="https://twitter.com/Fernando_Her85" target="_blank"><FaXTwitter /></a>
+      <a class="hover:bg-white/20 hover:scale-150 hover:rounded-full" href="https://ca.linkedin.com/in/fernando-herrera-b6b204200" target="_blank">
+        <img src="/icons/linkedin.svg" alt="Icon de LinkedIn">
+      </a>
+      <a class="hover:bg-white/20 hover:scale-150 hover:rounded-full" href="https://github.com/Klerith" target="_blank">
+        <img src="/icons/github.svg" alt="Icon de GitHub">  
+      </a>
+      <a class="hover:bg-white/20 hover:scale-150 hover:rounded-full" href="https://www.youtube.com/channel/UCuaPTYj15JSkETGnEseaFFg" target="_blank">
+        <img src="/icons/youtube.svg" alt="Icon de Youtube">
+      </a>
+      <a class="hover:bg-white/20 hover:scale-150 hover:rounded-full" href="https://twitter.com/Fernando_Her85" target="_blank">
+        <img src="/icons/x.svg" alt="Icon de X">
+      </a>
     </div>
   </div>
 <!-- Alejandro Prado -->
-  <div class={`
-    lg:flex lg:flex-col lg:items-center lg:justify-center lg:transform lg:w-full`}>
+  <!-- <div class={` hover:bg-black/10 transition-all
+    lg:flex lg:flex-col lg:items-center lg:justify-center lg:transform lg:w-full
+    lg:hover:transition-all
+  `}>
     <CardCredit 
       img="./mentors/alejandro.webp"
       nombre="Alejandro Prado"
@@ -86,5 +121,5 @@ import { FaXTwitter } from 'react-icons/fa6'
     `}>
       <a class="hover:bg-white/20 hover:scale-150 hover:rounded-full" href="https://cl.linkedin.com/in/alejandro-prado-prado" target="_blank"><FaLinkedin /></a>
     </div>
-  </div>
+  </div> -->
 </section>

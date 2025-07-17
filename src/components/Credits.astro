@@ -2,12 +2,11 @@
 import SocialMentors from './SocialMentors.astro'
 ---
 
-<section id="credits" class="h-screen w-screen flex flex-col items-center justify-center">
-  <!-- <h2 class={`
-    text-center text-3xl w-full text-white font-light py-8 font-text3 visible
-    lg:text-5xl lg:font-text2 lg:pt-28 lg:w-full
-  `}>Mentores</h2> -->
+<section id="credits" class={`
+  lg:h-screen lg:w-screen lg:flex lg:flex-col lg:items-center lg:justify-center lg:px-28
+`}>
   <div>
+    <h1 class="font-title text-2xl text-center w-full pt-4 text-white lg:hidden">Mentores</h1>
     <SocialMentors />
   </div>
 </section>

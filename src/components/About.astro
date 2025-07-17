@@ -1,41 +1,35 @@
 ---
 import CardAbout from "./CardAbout.astro";
 
-const elem = ['Anime (One Piece es mi preferido) 👍',
-'Películas (Cine de terror y comedia generalmente) 💀',
-'Aire libre (Pasear a mi perro y andar en bicicleta) 🚵',
-'Lectura (De auto-aprendizaje, mangas y webcomics) 📙',
-'Programación (Intentando mejorar un poquito mas cada vez) 💻',
-'Ejercicio (Lo mínimo para mantenerme y lo suficiente para no cansarme tanto) 🏋️',
-'Drogas (No le hago a ninguna delicia por el momento) 💊']
+// const elem = ['Anime (One Piece es mi preferido) 👍',
+// 'Películas (Cine de terror y comedia generalmente) 💀',
+// 'Aire libre (Pasear a mi perro y andar en bicicleta) 🚵',
+// 'Lectura (De auto-aprendizaje, mangas y webcomics) 📙',
+// 'Programación (Intentando mejorar un poquito mas cada vez) 💻',
+// 'Ejercicio (Lo mínimo para mantenerme y lo suficiente para no cansarme tanto) 🏋️',
+// 'Drogas (No le hago a ninguna delicia por el momento) 💊']
 ---
 
-
-
 <section id="about" class={`
-  h-screen w-screen flex flex-col items-center
+  h-screen w-screen flex flex-col items-center pb-10
   lg:flex lg:justify-center lg:items-center lg:place-items-center lg:overflow-hidden lg:h-screen lg:w-screen
 `}>
-  <!-- <h2 class={`
-    text-center text-3xl w-full text-white font-light py-8 font-text3 visible
-    lg:text-5xl lg:font-text2 lg:pt-28 lg:w-full
-  `}>Un poco sobre mí</h2> -->
+  <h1 class="font-title text-2xl text-center w-full py-8 text-white lg:hidden">Sobre mí</h1>
   <div class={`
-    px-10 h-full flex flex-col items-center overflow-y-auto pb-10 gap-y-2
-    lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:gap-4 lg:w-full lg:h-full lg:max-h-full lg:py-40 lg:px-40
-    [&>div]:lg:h-full [&>div]:rounded-lg [&>div]:transition-all [&>div]:ease-in-out [&>div]:duration-700 [&>div]:bg-[#03485F] [&>div]:flex [&>div]:justify-center [&>div]:items-center [&>div]:text-white [&>div]:transform [&>div]:lg:w-full [&>div]:lg:px-10 
-    [&>div]:h-full [&>div]:w-80
+    h-full w-full flex flex-col items-center justify-center overflow-y-auto gap-y-4 
+    lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:gap-4 lg:w-full lg:h-full lg:max-h-full lg:py-20 lg:px-28
+    [&>div]:w-96 [&>div]:rounded-lg [&>div]:transition-all [&>div]:ease-in-out [&>div]:duration-700 [&>div]:bg-transparent [&>div]:flex [&>div]:justify-center [&>div]:items-center [&>div]:text-white [&>div]:transform [&>div]:lg:w-full [&>div]:lg:px-10 
   `}>
     <CardAbout title="Personal" text="Nacido y criado en Chile desde 1995 hasta la presente fecha. Disfruto ver anime, películas, y jugar videojuegos con mis amigos, entre otras cosas."/>
-    <CardAbout title="Estudios" text="Estoy titulado como Analista Programador Computacional y lo que más disfruté aprender fue Desarrollo y Diseño de Aplicaciones Web, fue en ese entonces que después de mi Titulación comencé a estudiar de manera autodidacta todo lo que tuviera relación con el Desarrollo Web."/>
+    <CardAbout title="Estudios" text="Titulado como Analista Programador Computacional, con un fuerte interés en el Desarrollo y Diseño de Aplicaciones Web. Tras finalizar mis estudios, inicié una etapa de autoaprendizaje continuo centrado en el Desarrollo Web, área en la que busco seguir creciendo y especializándome."/>
     <div class={`
-      hover:bg-[#03485F]
-      lg:hover:shadow lg:hover:bg-[#03687F] lg:hover:w-full lg:hover:h-[17rem] lg:hover:scale-[1.01] overflow-auto flex justify-center items-center
-      [&>ul>li]:lg:hover:visible [&>h2]:lg:hover:invisible 
-      [&>ul>li]:active:visible [&>h2]:active:invisible
+      lg:h-44 lg:flex lg:justify-center lg:items-center
+      lg:hover:shadow-xl lg:hover:bg-black/20 lg:hover:duration-500 duration-75 lg:hover:transition-all lg:hover:w-full lg:hover:h-96 lg:hover:scale-[1.01]
+      [&>h2]:lg:hover:invisible [&>h2]:active:invisible 
+      [&>ul>li]:lg:hover:visible [&>ul]:lg:hover:h-full [&>ul>li]:active:visible [&>ul>li]:transition-all
     `}>
       <h2 class="w-full absolute text-center text-4xl lg:text-5xl">Pasatiempos</h2>
-      <ul class="flex flex-col gap-y-2 [&>li]:invisible [&>li]:w-full [&>li]:h-auto [&>li]:hover:transition-all [&>li]:text-ellipsis [&>li]:lg:text-xl">
+      <ul class="flex flex-col justify-center items-center gap-y-2 w-full h-40 [&>li]:px-6 [&>li]:invisible [&>li]:w-full [&>li]:h-10 [&>li]:hover:transition-all [&>li]:text-ellipsis [&>li>p]:lg:text-md∑∑">
         <li class="flex justify-start items-center gap-x-2">
           <p class="text-lg flex justify-center items-center gap-x-3">
             <img src="/icons/skull.svg" alt="Icon de Calavera">
@@ -80,19 +74,6 @@ const elem = ['Anime (One Piece es mi preferido) 👍',
         </li>
       </ul>
     </div>
-    <CardAbout title="Profesional" text="Sin experiencia laboral en el rubro por el momento, mientras tanto me mantengo estudiando y aprendiendo para mejorar cada día."/>
+    <CardAbout title="Profesional" text="Estoy en un proceso continuo de aprendizaje con el objetivo de superarme y mejorar constantemente."/>
   </div>
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
-

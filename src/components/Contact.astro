@@ -1,8 +1,5 @@
 ---
-import { FiDownload } from "react-icons/fi";
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
+
 ---
 
 <section
@@ -10,49 +7,51 @@ import { MdEmail } from "react-icons/md";
   class="h-screen w-screen relative overflow-hidden text-center"
 >
   <h2
-    class="text-center text-white text-3xl font-light py-8 font-text3 lg:font-text2"
+    class="text-center text-white text-2xl py-20 font-text3 lg:font-title"
   >
     Contacto
   </h2>
-  <div class="w-full h-full flex flex-col items-center">
-    <div class="flex flex-col items-center h-full gap-y-4 [&>a]:w-full [&>a]:py-5 [&>a]:px-10 [&>a]:bg-white/10 [&>a]:rounded-xl [&>a]:border [&>a]:border-white/30 [&>a]:text-white [&>a]:flex [&>a]:items-center [&>a]:gap-x-4">
-      <a
-        href="https://www.linkedin.com/in/crist%C3%B3bal-valderrama-contreras-176275100/"
-        target="_blank"
-        class="active:scale-95 hover:bg-white/80 hover:text-black"
-      >
-        <FaLinkedin className="animate-pulse" /> Ir a LinkedIn
-      </a>
-      <a
-        href="https://github.com/Cristobal21"
-        target="_blank"
-        class={`
-            active:scale-95 hover:bg-white/80 hover:text-black
-          `}
-      >
-        <FaGithub className="animate-pulse" /> Ir a GitHub
-      </a>
-      <a
-        href="#"
-        onclick="
-        window.open('mailto:tobal.developer@gmail.com');"
-        target="_blank"
-        class={`
-            active:scale-95 hover:bg-white/80 hover:text-black
-          `}
-      >
-        <MdEmail className="animate-pulse" /> Escríbeme
-      </a>
-      <a
-        href="Cristobal-Valderrama.pdf"
-        target="_blank"
-        download="Cristobal Valderrama"
-        class={`
-          active:scale-95 hover:bg-white/80 hover:text-black
+  <div class={`
+    grid grid-cols-2 grid-flow-row place-items-center mx-10 gap-y-10 
+    [&>a]:scale-105 [&>a]:shadow-xl [&>a]:size-32 [&>a]:bg-white/10 [&>a]:rounded-xl [&>a]:border [&>a]:border-white/30 [&>a]:text-white [&>a]:flex [&>a]:justify-center [&>a]:items-center
+    [&>a>img]:size-20
+  `}>
+    <a
+      href="https://www.linkedin.com/in/crist%C3%B3bal-valderrama-contreras-176275100/"
+      target="_blank"
+      class="active:scale-95"
+    >
+      <img src="/icons/linkedin.svg" alt="Icon de LinkedIn" />
+    </a>
+    <a
+      href="https://github.com/Cristobal21"
+      target="_blank"
+      class={`
+          active:scale-95
         `}
-      >
-        <FiDownload className="animate-bounce" /> Descargar Currículum
-      </a>
-    </div>
+    >
+      <img src="/icons/github.svg" alt="Icon de GitHub" />
+    </a>
+    <a
+      href="#"
+      onclick="
+      window.open('mailto:tobal.developer@gmail.com');"
+      target="_blank"
+      class={`
+          active:scale-95
+        `}
+    >
+      <img src="/icons/mail.svg" alt="Icon de Email" />
+    </a>
+    <a
+      href="Cristobal-Valderrama.pdf"
+      target="_blank"
+      download="Cristobal Valderrama"
+      class={`
+        active:scale-95
+      `}
+    >
+      <img src="/icons/download.svg" alt="Icon de CV" class="animate-pulse"/>
+    </a>
   </div>
 </section>

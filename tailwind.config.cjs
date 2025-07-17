@@ -11,6 +11,15 @@ module.exports = {
 				text3: ['FontMedium','sans-serif'],
 				textRegular: ['FontRegular', 'sans-serif'],
 			},
+			keyframes: {
+				'rotate-vertical-center': {
+				'0%': { transform: 'rotateY(0deg)' },
+				'100%': { transform: 'rotateY(360deg)' },
+			},	
+			},	
+			animation: {
+				'rotate-vertical-center': 'rotate-vertical-center 0.8s',
+			},
 		},
 	},
 	plugins: [],

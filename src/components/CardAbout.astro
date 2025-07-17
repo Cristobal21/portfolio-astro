@@ -1,14 +1,15 @@
 ---
 const { title, text, clases } = Astro.props
+// import '../components/styles.css'
 ---
 
-<div class={`
-  hover:scale-[1.01]
-  overflow-auto flex justify-center items-center
-  lg:hover:shadow lg:hover:bg-[#03687F] lg:hover:h-[17rem]
-  [&>p]:lg:hover:visible [&>h2]:lg:hover:invisible 
-  [&>p]:active:visible [&>h2]:active:invisible
+<div class={` 
+  overflow-auto flex justify-center items-center transition-all duration-100 h-auto
+  lg:h-44 lg:overflow-hidden
+  lg:hover:shadow-xl lg:hover:scale-[1.01] lg:hover:bg-black/20 lg:hover:duration-500 lg:hover:transition-all lg:hover:h-80
+  [&>p]:lg:hover:visible [&>p]:active:visible 
+  [&>h2]:lg:hover:invisible [&>h2]:active:invisible
 `}>
   <h2 class="w-full absolute text-center text-4xl lg:text-5xl">{title}</h2>
-  <p class="invisible w-full h-auto px-6 hover:transition-all text-ellipsis text-sm lg:text-xl">{text}</p> 
+  <p class=" lg:my-[1em] invisible w-full h-auto px-6 hover:transition-all text-ellipsis text-sm lg:text-xl">{text}</p> 
 </div>

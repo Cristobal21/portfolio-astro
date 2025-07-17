@@ -1,0 +1,10 @@
+imgcavc {
+    mask-image: linear-gradient(
+        black 80%,
+        transparent
+    );
+}
+
+p {
+    margin-block: 1lh;
+}

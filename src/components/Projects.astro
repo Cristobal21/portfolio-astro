@@ -1,63 +1,508 @@
 ---
 import CardProject from "./CardProject.astro";
+
+const iconsSeguryred = [
+  '/icons/astro.svg',
+  '/icons/tailwind.svg',
+];
+const iconsGonza = [
+  '/icons/astro.svg',
+  '/icons/tailwind.svg',
+];
+const iconsTesla = [
+  '/icons/tailwind.svg',
+  '/icons/js.svg',
+  '/icons/astro.svg',
+];
+const iconsWeather = [
+  '/icons/bootstrap.svg',
+  '/icons/js.svg',
+  '/icons/react.svg',
+  '/icons/tailwind.svg',
+];
+const iconsDelyOrder = [
+  '/icons/react.svg',
+  '/icons/tailwind.svg',
+  '/icons/node.svg',
+  '/icons/mongo.svg',
+  '/icons/js.svg',
+];
+
+const description = "Herramienta web para registrar y administrar pedidos utilizando MongoDB como base de datos."
+const path_img = "/icons/delivery.svg";
+const title = "Pedidos y Despachos";
+
+
+
 ---
 
 <section id="projects" class={`
-  h-screen w-screen relative overflow-hidden
-  lg:flex lg:flex-col lg:items-center lg:h-screen
+  h-screen w-screen relative overflow-hidden flex items-start justify-center py-10
+  lg:h-screen lg:w-screen lg:relative lg:overflow-hidden lg:py-0 lg:place-items-center
 `}>
-  <!-- <h2 class={`
-    text-white text-3xl text-center font-light pt-10 font-text3 
-    lg:text-5xl lg:font-text2 lg:pt-28 lg:w-full
-  `}>Proyectos Personales</h2> -->
-  <div class="lg:h-full lg:w-full lg:flex lg:justify-center lg:items-center">
+  <div
+    class={`
+      w-full flex flex-col justify-center items-center gap-y-4 
+      lg:overflow-hidden lg:transition-all lg:px-28 lg:gap-6 lg:grid lg:grid-cols-3 lg:grid-flow-row lg:justify-items-center lg:w-full lg:h-auto lg:py-6
+    `}
+  > 
+    <CardProject
+      title="SeguryRed"
+      description="Página web laboral y profesional de tipo Landing Page de la empresa de Seguridad y Televigilancia, SeguryRed."
+      icons={iconsSeguryred}
+      tech={["Astro", "Tailwindcss"]}
+      urlApp="#"
+      urlGithub="https://github.com/Cristobal21/segury-red"
+      path_img="/projects/seguryred_logo.webp"
+    />
+    <CardProject
+      title="Seguros GC"
+      description="Página Web personal y laboral de Gonzalo Contreras. Agente de Seguros."
+      icons={iconsGonza}
+      tech={["Astro", "Tailwindcss",]}
+      urlApp="#"
+      urlGithub="https://github.com/Cristobal21/gonza"
+      path_img="/projects/gonza_logo.webp"
+    />
+    <CardProject
+      title="Landing / Tesla"
+      description="Esta es una Landing page inspirada en tesla.com, se desarrolló en un stream sobre Desarrollo Web, siendo el anfitrión, Midudev."
+      icons={iconsTesla}
+      tech={["Tailwindcss", "Javascript", "Astro"]}
+      urlApp="https://teslanding.netlify.app"
+      urlGithub="https://github.com/Cristobal21/landing-tesla"
+      path_img="/projects/tesla_logo.webp"
+    /> 
+    <CardProject
+      title="Weather App"
+      description="Busca información metereológica de algún lugar de Latinoamérica."
+      icons={iconsWeather}
+      tech={["Bootstrap", "Javascript", "React", "Tailwindcss"]}
+      urlApp="https://weather-latino.netlify.app/"
+      urlGithub="https://github.com/Cristobal21/Weather-app"
+      path_img="/projects/weatherApp_logo.webp"
+    />
+    <section class="w-full flex justify-center items-center">
+      <!-- Este div es para pantalla SM -->
+      <!-- <div class="w-full lg:hidden">
+        <div
+          class={`hidden
+            justify-center items-center
+            lg:flex lg:justify-center lg:bg-black/20 lg:gap-x-4 lg:top-0 lg:text-white lg:transition-all lg:transform lg:duration-700 lg:ease-in-out lg:mx-10 lg:h-72 lg:rounded lg:w-full 
+            lg:hover:shadow-2xl lg:hover:scale-[1.01] lg:hover:translate-y-2 lg:hover:bg-black/30 lg:hover:transition-all lg:hover:ease-out lg:hover:duration-700
+            [&>div>div]:lg:hover:block [&>div>div]:lg:transition-all`}
+        > 
+          <div class={`
+            mx-4 rounded my-1 w-full bg-white/10
+            lg:border-none lg:m-0 lg:flex lg:mx-0 lg:flex-col lg:items-center lg:w-full lg:ease-in lg:pt-6 lg:justify-between lg:transition-all lg:h-full
+            [&>div]:lg:hidden [&>section>div>div>p]:hover:block [&>section>img]:hover:hidden [&>section>div]:lg:hover:border-none
+          `}>
+            <section class="flex flex-row justify-center items-center w-full">
+              <h2 class={`
+              text-white py-0 font-title w-full hidden
+                lg:text-center lg:text-xl lg:font-text3 lg:py-2 lg:transition-all lg:flex lg:justify-center
+              `}>
+                {title}
+              </h2>
+            </section>
+            <section class={`
+              flex flex-col justify-center items-center px-6 my-2 size-full
+              lg:flex lg:flex-col lg:justify-center lg:items-center lg:px-0 lg:gap-y-4 lg:size-full
+            `}>
+              <div class={`
+                w-full flex flex-row justify-between items-center py-1
+                lg:hidden
+              `}>
+                <img src={path_img} alt="Imagen de Proyecto" class={`
+                  size-20 rounded-3xl p-1
+                  lg:rounded-full lg:w-auto lg:h-32 bg-white lg:transition-all lg:flex lg:justify-center lg:items-center
+                `}/>
+                <div class={`
+                  flex flex-row items-center justify-between w-full 
+                `}>
+                  <div class="flex flex-col justify-center items-center w-full gap-y-1">
+                    <h2 class={`
+                    text-white py-2 font-title w-full text-center text-lg
+                    `}>
+                      {title}
+                    </h2>
+                    <ul
+                      class="flex justify-center items-center gap-x-2 text-white w-full"
+                    >
+                      {
+                        iconsDelyOrder.map((src) => (
+                          <li class={`
+                            flex justify-center items-center bg-white/20 rounded-full size-8
+                          `}>
+                            <img src={src} alt="icon" class={`
+                              size-6
+                            `}/>  
+                          </li>
+                        ))
+                      }
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <img src={path_img} alt="Imagen de Proyecto" class={`
+               size-14 rounded-full p-1 scale-105 shadow-md shadow-black hidden
+                lg:rounded-full lg:w-auto lg:h-32 bg-white lg:transition-all lg:flex lg:justify-center lg:items-center
+              `}/>
+              <div class={`
+                flex flex-col items-center h-auto w-full transition-all duration-1000
+              `}>
+                <div class="flex h-auto w-full">
+                  <p class={`
+                    hidden text-md text-white/80 text-justify tracking-tight px-4 font-textRegular transition-all hover:hidden
+                    lg:hover:hidden
+                  `}>
+                    {description}
+                  </p>
+                </div>
+              </div>
+            </section>
+            <div
+              class={`
+                flex flex-col justify-between text-center 
+                lg:w-full lg:px-0
+                [&>div>div>a]:text-lg [&>div>div>a]:transition-all
+              `}>
+              <div class={`
+                hidden 
+                lg:block lg:w-full lg:transition-all
+              `}>
+                <ul
+                  class="flex justify-center items-center text-white text-center gap-x-2 w-full my-4"
+                >
+                  {
+                    iconsDelyOrder.map((src) => (
+                      <li class={`
+                        flex justify-center items-center bg-white/20 rounded-full p-2
+                        hover:bg-white/30
+                      `}>
+                        <img src={src} alt="icon" class={`
+                          h-6 w-auto
+                        `}/>  
+                      </li>
+                    ))
+                  }
+                </ul>
+              </div>
+              <div class={`
+                text-black text-md font-text3 text-center bg-white/70 py-2 mt-2 hidden
+                lg:flex lg:justify-center lg:w-full lg:py-0 lg:rounded-b text-lg
+              `}>
+                <p
+                  class="lg:transition-all lg:text-black lg:bg-white/50 lg:px-10 lg:font-text3 lg:py-2 text-center lg:text-lg lg:rounded-b"
+                >
+                  En Desarollo
+                  <img src="/icons/code.svg" alt="Icono de Code" class="w-6 h-6 inline-block mx-2"/>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <div
+        class={`lg:h-72 lg:grid lg:grid-cols-1 lg:grid-rows-1 lg:gap-y-4 lg:overflow-hidden
+          flex flex-row justify-center items-center w-full 
+          lg:bg-black/20 lg:top-0 lg:text-white lg:transition-all lg:transform lg:duration-700 lg:ease-in-out lg:mx-0 lg:rounded lg:w-full
+          lg:hover:shadow-lg lg:hover:scale-[1.01] lg:hover:translate-y-2 lg:hover:bg-white/5 lg:hover:transition-all lg:hover:ease-out lg:hover:duration-700
+          [&>div>div]:lg:hover:flex [&>div>div>div]:lg:hover:flex  [&>div>div]:lg:transition-all`}
+      > 
+        <div class={`
+          w-full py-2 mx-10 border border-white/10 rounded-lg bg-black/20 shadow-lg shadow-black/20
+          lg:flex lg:flex-col lg:mx-0 lg:items-center lg:w-full lg:bg-black/10 lg:ease-in lg:transition-all lg:h-full lg:pt-6 lg:pb-0
+          [&>div]:lg:hidden [&>section>div>p]:lg:hover:block [&>section>img]:hover:hidden [&>section>div>div>ul]:lg:hover:flex
+        `}>
+          <h2 class={`
+          text-white font-title w-full hidden
+            lg:text-center lg:text-2xl lg:font-title lg:transition-all lg:flex lg:justify-center lg:items-center
+          `}>
+            {title}
+          </h2>
+          <section class={`
+            flex flex-col justify-center items-center px-10 size-full w-full h-16
+            lg:flex lg:flex-col lg:justify-center lg:items-center lg:px-10 lg:size-full
+          `}>
+            <!-- Div para pantalla SM -->
+            <!-- <div class={`
+              w-full flex justify-start items-center mb-2 pt-1
+              lg:hidden
+            `}>
+              <img src={path_img} alt="Imagen de Proyecto" class={`
+                size-16 rounded-3xl p-1 bg-white
+              `}/>
+              <h3 class={`
+                text-white font-title w-1/2 text-start pl-6 text-lg 
+                lg:hidden
+              `}>
+                {title}
+              </h3> -->
+              <!-- <a href="#" target="_blank" class="lg:hidden text-white gap-x-2 w-auto h-14 rounded-full bg-orange-700 px-2 py-2 flex justify-center items-center hover:bg-white/40">
+                <p class="font-text2">Demo</p>
+                <img src="/icons/link-external.svg" alt="foto de icon external link" class="size-6" />
+              </a>  -->
+              <!-- <div class={`
+                flex flex-row items-center justify-between w-full
+              `}>
+                <div class="flex flex-row justify-center items-center w-full">
+                  <h2 class={`
+                  text-white py-2 font-title w-full flex justify-center items-center
+                  `}>
+                    {title}
+                  </h2>
+                  <ul
+                    class="flex justify-center items-center gap-x-2 text-white w-full"
+                  >
+                    {
+                      icons.map((src) => (
+                        <li class={`
+                          flex justify-center items-center bg-white/20 rounded-full size-8
+                        `}>
+                          <img src={src} alt="icon" class={`
+                            size-6
+                          `}/>  
+                        </li>
+                      ))
+                    }
+                  </ul>
+                </div>
+              </div> -->
+            <!-- </div> -->
+            <img src={path_img} alt="Imagen de Proyecto" class={`
+              size-14 rounded-full p-1 scale-105 shadow shadow-black hidden 
+              lg:rounded-full lg:size-32 bg-white lg:transition-all lg:flex lg:justify-center lg:items-center
+            `}/>
+            
+            <div class="lg:flex lg:flex-col lg:items-center lg:w-full">
+              <p class={`hidden 
+                lg:text-white/80 text-justify leading-tight transition-all py-2 lg:w-full
+                lg:hidden lg:text-md lg:tracking-tight lg:leading-tight lg:font-text2 lg:text-ellipsis
+              `}>
+                {description}
+              </p>
+              <div class="lg:flex lg:justify-center lg:items-center lg:gap-x-2 lg:px-3 lg:w-full lg:h-8">
+                <ul class={`
+                  lg:hidden lg:flex-row lg:justify-center lg:items-center lg:gap-x-2 
+                  [&>li]:rounded-full [&>li]:p-2 [&>li]:bg-white/20                `}>
+                  <li>
+                    <img src="/icons/react.svg" alt="Icon de ReactJS" class="size-6"/>
+                  </li>
+                  <li>
+                    <img src="/icons/bootstrap.svg" alt="Icon de Bootstrap" class="size-6"/>
+                  </li>
+                  <li>
+                    <img src="/icons/mongo.svg" alt="Icon de Mongo DB" class="size-6"/>
+                  </li>
+                  <li>
+                    <img src="/icons/node.svg" alt="Icon de Node JS" class="size-6"/>
+                  </li>
+                  <li>
+                    <img src="/icons/tailwind.svg" alt="Icon de TailwindCss|" class="size-6"/>
+                  </li>
+                </ul>
+              </div>
+              <!-- <div class="lg:hidden bg-transparent py-2 px-0 w-full flex justify-between items-center gap-x-2">
+                <a href="#" target="_blank" class="bg-black/30 py-2 px-6 w-1/2 rounded-full border border-white/20 flex justify-center items-center ">
+                  <img src="/icons/github.svg" alt="Icon de GitHub" class="size-6 lg:hidden text-white" />
+                </a>
+                <a href="#" target="_blank" class="bg-black/30 py-2 px-6 w-1/2 rounded-full border border-white/20 flex justify-center items-center ">
+                  <img src="/icons/info.svg" alt="Icon de Información" class="size-6 lg:hidden" />
+                </a>
+                <a href="#" target="_blank" class="bg-white/80 px-6 h-10 w-full rounded-full border border-white/20 flex justify-center items-center ">
+                  <p class="font-text3 font-bold text-center text-black">Demo</p>
+                </a>
+              </div> -->
+            </div>
+          </section>
+          <div
+            class={`
+              flex flex-col justify-between text-center 
+              lg:w-full lg:px-0 lg:h-12 lg:flex lg:justify-center lg:items-center
+              [&>div>div>a]:text-lg [&>div>div>a]:transition-all
+            `}>
+            <!-- <div class={`
+              hidden 
+              lg:block lg:w-full lg:transition-all
+            `}>
+              <ul
+                class="flex justify-center items-center text-white text-center gap-x-2 size-full pb-4"
+              >
+                {
+                  icons.map((src) => (
+                    <li class={`
+                      flex justify-center items-center bg-white/20 rounded-full p-2
+                      hover:bg-white/30
+                    `}>
+                      <img src={src} alt="icon" class={`
+                        h-6 w-auto
+                      `}/>  
+                    </li>
+                  ))
+                }
+              </ul>
+            </div> -->
+            <div class="lg:w-full lg:gap-x-4">
+              <p class="text-black text-lg bg-white/80 py-2 w-full h-12 rounded-b font-text3 flex justify-center items-center gap-x-2">
+                En Desarrollo
+                <img src="/icons/code.svg" alt="Icono de Code" class="size-6"/>
+              </p>
+            </div>
+
+            <!-- <div class={`
+              w-full hidden
+              lg:bottom-0 lg:flex lg:justify-center lg:w-full lg:h-auto
+              lg:[&>a]:h-12
+            `}>
+              <p class="bg-white/70 py-2 px-4 w-full">En Desarrollo</p>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Este div es para pantalla LG y más -->
+      <!-- <div
+        class={`[&>div>section>div>p]:hover:block [&>section>img]:hover:hidden
+          w-full hidden
+          lg:mx-0 lg:h-72 lg:rounded lg:w-full lg:flex lg:justify-center lg:bg-black/20 lg:top-0 lg:text-white lg:transition-all lg:transform lg:duration-700 lg:ease-in-out 
+          lg:hover:shadow-xl lg:hover:scale-[1.01] lg:hover:translate-y-2 lg:hover:bg-white/5 lg:hover:transition-all lg:hover:ease-out lg:hover:duration-700
+          [&>div>div]:lg:hover:block [&>div>div]:lg:transition-all`}
+      > 
+        <div class={`
+          border border-white/30 my-2 mx-4 rounded
+          lg:border-none lg:m-0 lg:flex lg:flex-col lg:items-center lg:w-full lg:ease-in lg:pt-6 lg:pb-0 lg:justify-between lg:transition-all lg:h-full
+          [&>div]:lg:hidden [&>section>img]:hover:hidden [&>section>div]:lg:hover:border-none
+        `}>
+          <section class="flex flex-row justify-center items-center gap-x-4 px-10">
+            <h2 class={`
+              text-white py-4 font-title w-full
+              lg:text-center lg:text-xl lg:w-full lg:font-text3 lg:py-2 lg:transition-all
+            `}>
+              Pedidos y Despachos
+            </h2>
+            <ul
+              class={` 
+                lg:hidden 
+                flex justify-center items-center text-white text-center gap-x-2 py-3 w-full
+                [&>li]:rounded-full [&>li]:p-1 [&>li]:bg-white/20
+                [&>li>img]:h-6 [&>li>img]:w-auto
+            `}>
+              <li>
+                <img src="/icons/react.svg" alt="Icon de ReactJS">
+              </li>
+              <li>
+                <img src="/icons/tailwind.svg" alt="Icon de Tailwindcss">
+              </li>
+              <li>
+                <img src="/icons/node.svg" alt="Icon de NodeJS">
+                </li>
+              <li>
+                <img src="/icons/mongo.svg" alt="Icon de MongoDB">
+                </li>
+              <li>
+                <img src="/icons/js.svg" alt="Icon de Javascript">
+              </li>
+            </ul>
+          </section>
+          <section class={`
+            flex flex-col justify-center items-center px-10 gap-y-4 size-full
+          `}>
+            <img src="/icons/delivery.svg" alt="Imagen de Proyecto" 
+              class={`
+                size-14 rounded-full p-1 scale-105 shadow-md shadow-black 
+                lg:rounded-full lg:w-auto lg:h-32 bg-white lg:transition-all lg:flex lg:justify-center lg:items-center
+              `}/>
+            <div class={`
+              flex h-auto w-full
+            `}>
+              <p class={`
+                text-md text-white/80 text-justify tracking-tight px-4 font-textRegular transition-all
+                lg:hidden lg:font-text2 lg:leading-tight lg:tracking-tight lg:text-ellipsis lg:py-2 lg:text-sm
+              `}>
+                Herramienta web para registrar y administrar pedidos utilizando MongoDB como base de datos.
+              </p>
+            </div>
+          </section>
+          <div
+            class={`
+              hidden
+              lg:flex lg:flex-col lg:items-center lg:justify-center lg:h-auto lg:w-full
+            `}
+          >
+            <ul
+              class={`
+                flex justify-center items-center text-white text-center gap-x-2 p-2 
+                [&>li]:flex [&>li]:justify-center [&>li]:items-center [&>li]:bg-white/20 [&>li]:rounded-full [&>li]:p-2
+                [&>li>img]:h-6 [&>li>img]:w-auto
+            `}>
+              <li class="hover:bg-white/30 hover:text-black">
+                <img src="/icons/react.svg" alt="Icon de ReactJS">
+              </li>
+              <li class="hover:bg-white/30 hover:text-black">
+                <img src="/icons/tailwind.svg" alt="Icon de Tailwindcss">
+              </li>
+              <li class="hover:bg-white/30 hover:text-black">
+                <img src="/icons/node.svg" alt="Icon de NodeJS">
+                </li>
+              <li class="hover:bg-white/30 hover:text-black">
+                <img src="/icons/mongo.svg" alt="Icon de MongoDB">
+                </li>
+              <li class="hover:bg-white/30 hover:text-black">
+                <img src="/icons/js.svg" alt="Icon de Javascript">
+              </li>
+            </ul>
+          </div>
+          <p
+            class={`
+              transition-all
+              lg:transition-all lg:text-black lg:bg-white/70 lg:px-10 lg:w-full lg:h-6 lg:font-text3 lg:text-lg lg:rounded-b lg:flex lg:justify-center lg:items-center
+            `}>
+              En Desarrollo
+              <img src="/icons/code.svg" alt="Icono de Code" class="w-6 h-10 my-0 mx-2"/>
+          </p>
+          <div class={`
+            text-black text-md font-text3 text-center py-2 mt-2
+            lg:w-full lg:rounded-b lg:border h-14 lg:flex lg:flex-col lg:items-center
+          `}>
+          </div>
+        </div>
+      </div> -->
+    </section>
     <div
       class={`
-        flex flex-col justify-between items-center overflow-y-auto scroll-behavior-smooth w-full px-36 transition-all
-        lg:overflow-hidden lg:transition-all lg:px-20 lg:gap-4 lg:grid lg:grid-cols-3 lg:grid-flow-row lg:py-32 lg:h-full lg:place-items-center lg:w-full
-      `}
-    >
-      <CardProject
-        title="Despachos App - En Desarrollo"
-        description="App para registrar pedidos en una base de datos MongoDB."
-        tech={["Tailwindcss", "Javascript", "React", "Node JS", "MongoDB"]}
-        urlApp="#"
-        urlGithub="#"
-        path_img="/projects/despachos_logo.webp"
-      />
-      <CardProject
-        title="Landing Page - Tesla"
-        description="Landing page de tesla.com, se ha desarrollado en un stream en vivo junto a mi streamer de Desarrollo Web preferido, Midudev."
-        tech={["Tailwindcss", "Javascript", "Astro"]}
-        urlApp="https://teslanding.netlify.app"
-        urlGithub="https://github.com/Cristobal21/landing-tesla"
-        path_img="/projects/tesla_logo.webp"
-      /> 
-      <CardProject
-        title="Weather App"
-        description="Buscador que muestra la información del clima de algún lugar de latinoamerica, los datos se obtienen de OpenWeather API."
-        tech={["Bootstrap", "Javascript", "React", "Tailwindcss", "Api"]}
-        urlApp="https://weather-latino.netlify.app/"
-        urlGithub="https://github.com/Cristobal21/Weather-app"
-        path_img="/projects/weatherApp_logo.webp"
-      />
-      <CardProject
-        title="Seguros GC"
-        description="Página Web personal y laboral de Gonzalo Contreras. Agente de Seguros."
-        tech={["Astro", "Tailwindcss",]}
-        urlApp="#"
-        urlGithub="https://github.com/Cristobal21/gonza"
-        path_img="/projects/gonza_logo.webp"
-      />
-      <CardProject
-        title="SeguryRed"
-        description="Página web laboral y profesional de tipo Landing Page de la empresa de Seguridad y Televigilancia, SeguryRed."
-        tech={["Astro", "Tailwindcss"]}
-        urlApp="#"
-        urlGithub="https://github.com/Cristobal21/segury-red"
-        path_img="/projects/seguryred_logo.webp"
-
-      />
+        hidden
+        lg:h-72 lg:rounded lg:w-full lg:bg-cover lg:bg-center lg:relative lg:flex lg:justify-center lg:items-center
+        lg:hover:transition-all lg:hover:duration-700`}
+    > 
+      <div class={`
+        bg-black/20 my-1 border border-white/50 rounded h-28 w-full mx-4 backdrop-blur-lg flex justify-center items-center
+        lg:inset-0 lg:mx-0 lg:border-none lg:bg-black/30 lg:backdrop-blur-xl lg:flex lg:items-center lg:justify-center lg:h-full lg:w-full
+      `}>
+        <h2 class={`
+          text-white text-center text-2xl font-bold py-2 drop-shadow-lg
+          lg:w-52
+        `}>
+          En busca de un nuevo desafío
+        </h2>
+      </div>
     </div>
   </div>
 </section>
+
+<style>
+  .scale-up-vertical-top {
+    animation: scale-up-vertical-top 1.6s linear;
+  }
+  @keyframes scale-up-vertical-top {
+    0% {
+      transform: scaleY(0.4);
+      transform-origin: center top;
+    }
+    100% {
+      transform: scaleY(1);
+      transform-origin: center top;
+    }
+  }
+</style>
